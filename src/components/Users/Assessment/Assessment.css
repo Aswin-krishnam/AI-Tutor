@@ -1,0 +1,601 @@
+/* Assessment.css */
+
+.assessment__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+  }
+  
+  .assessment__header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e1e4e8;
+  }
+  
+  .assessment__header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #2a3f54;
+  }
+  
+  .assessment__course-info {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #606770;
+  }
+  
+  .assessment__divider {
+    margin: 0 0.5rem;
+    color: #ccc;
+  }
+  
+  /* Loading and Error States */
+  .assessment__loading,
+  .assessment__error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: center;
+  }
+  
+  .assessment__spinner {
+    animation: spin 1s linear infinite;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #4a6ee0;
+  }
+  
+  .assessment__error-content {
+    max-width: 500px;
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .assessment__error-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 1rem;
+    background-color: #ff5252;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Quiz Interface */
+  .assessment__quiz {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .assessment__quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .assessment__progress-container {
+    flex: 1;
+    background-color: #f1f1f1;
+    height: 8px;
+    border-radius: 4px;
+    margin-right: 1rem;
+    position: relative;
+  }
+  
+  .assessment__progress-bar {
+    height: 100%;
+    background-color: #4a6ee0;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+  }
+  
+  .assessment__progress-text {
+    font-size: 0.85rem;
+    color: #606770;
+    position: absolute;
+    top: 10px;
+    left: 0;
+  }
+  
+  .assessment__timer {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #2a3f54;
+  }
+  
+  .assessment__timer svg {
+    margin-right: 0.5rem;
+    color: #f44336;
+  }
+  
+  .assessment__question-container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .assessment__question-number {
+    font-size: 0.9rem;
+    color: #606770;
+    margin-bottom: 0.75rem;
+  }
+  
+  .assessment__question-text {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    color: #2a3f54;
+  }
+  
+  .assessment__options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .assessment__option {
+    padding: 1rem;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .assessment__option:hover {
+    border-color: #4a6ee0;
+    background-color: #f8f9ff;
+  }
+  
+  .assessment__option.assessment__selected {
+    border-color: #4a6ee0;
+    background-color: #f0f4ff;
+    position: relative;
+  }
+  
+  .assessment__option.assessment__selected::after {
+    content: "✓";
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4a6ee0;
+    font-weight: bold;
+  }
+  
+  .assessment__navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e1e4e8;
+  }
+  
+  .assessment__nav-btn,
+  .assessment__submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .assessment__nav-btn {
+    background-color: #f8f9fa;
+    border: 1px solid #e1e4e8;
+    color: #606770;
+  }
+  
+  .assessment__nav-btn:hover:not(:disabled) {
+    background-color: #e9ecef;
+  }
+  
+  .assessment__nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .assessment__nav-btn svg {
+    margin-right: 0.5rem;
+  }
+  
+  .assessment__nav-btn svg:last-child {
+    margin-right: 0;
+    margin-left: 0.5rem;
+  }
+  
+  .assessment__submit-btn {
+    background-color: #4a6ee0;
+    border: none;
+    color: white;
+  }
+  
+  .assessment__submit-btn:hover:not(:disabled) {
+    background-color: #3a5fcc;
+  }
+  
+  .assessment__submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  .assessment__questions-overview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e1e4e8;
+  }
+  
+  .assessment__question-marker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  
+  .assessment__question-marker.assessment__current {
+    background-color: #2a3f54;
+    color: white;
+  }
+  
+  .assessment__question-marker.assessment__answered {
+    background-color: #e3f2fd;
+    border: 2px solid #4a6ee0;
+  }
+  
+  .assessment__question-marker.assessment__answered.assessment__current {
+    background-color: #4a6ee0;
+    color: white;
+  }
+  
+  /* Results Screen */
+  .assessment__results {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .assessment__results-header {
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    color: white;
+  }
+  
+  .assessment__results-header.assessment__passed {
+    background-color: #4caf50;
+  }
+  
+  .assessment__results-header.assessment__failed {
+    background-color: #f44336;
+  }
+  
+  .assessment__results-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .assessment__results-header h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .assessment__score {
+    display: inline-flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .assessment__score-value {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+  
+  .assessment__score-label {
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+  
+  .assessment__results-summary {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1rem;
+  }
+  
+  .assessment__review-section {
+    padding: 2rem;
+  }
+  
+  .assessment__review-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #2a3f54;
+  }
+  
+  .assessment__review-item {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+  }
+  
+  .assessment__review-item.assessment__correct {
+    border-left: 4px solid #4caf50;
+  }
+  
+  .assessment__review-item.assessment__incorrect {
+    border-left: 4px solid #f44336;
+  }
+  
+  .assessment__review-question {
+    display: flex;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .assessment__question-number {
+    margin-right: 0.5rem;
+  }
+  
+  .assessment__question-text {
+    flex: 1;
+  }
+  
+  .assessment__result-icon {
+    margin-left: 1rem;
+  }
+  
+  .assessment__review-item.assessment__correct .assessment__result-icon {
+    color: #4caf50;
+  }
+  
+  .assessment__review-item.assessment__incorrect .assessment__result-icon {
+    color: #f44336;
+  }
+  
+  .assessment__review-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .assessment__review-option {
+    padding: 0.75rem;
+    border-radius: 4px;
+    background-color: white;
+    border: 1px solid #e1e4e8;
+    position: relative;
+  }
+  
+  .assessment__review-option.assessment__selected {
+    border-color: #4a6ee0;
+    background-color: #f0f4ff;
+  }
+  
+  .assessment__review-option.assessment__correct-option {
+    border-color: #4caf50;
+    background-color: rgba(76, 175, 80, 0.1);
+  }
+  
+  .assessment__correct-mark {
+    position: absolute;
+    right: 1rem;
+    color: #4caf50;
+    font-weight: bold;
+  }
+  
+  .assessment__explanation {
+    background-color: #fff9e6;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .assessment__explanation h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #b7791f;
+  }
+  
+  .assessment__explanation p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #744210;
+  }
+  
+  .assessment__results-actions {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    border-top: 1px solid #e1e4e8;
+  }
+  
+  .assessment__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .assessment__btn svg {
+    margin-right: 0.5rem;
+  }
+  
+  .assessment__btn-primary {
+    background-color: #4a6ee0;
+    border: none;
+    color: white;
+  }
+  
+  .assessment__btn-primary:hover {
+    background-color: #3a5fcc;
+  }
+  
+  .assessment__btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    color: white;
+  }
+  
+  .assessment__btn-secondary:hover {
+    background-color: #5a6268;
+  }
+  
+  .assessment__btn-outline {
+    background-color: transparent;
+    border: 1px solid #4a6ee0;
+    color: #4a6ee0;
+  }
+  
+  .assessment__btn-outline:hover {
+    background-color: #f0f4ff;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .assessment__container {
+      padding: 1rem;
+    }
+    
+    .assessment__header h1 {
+      font-size: 1.5rem;
+    }
+    
+    .assessment__question-text {
+      font-size: 1.2rem;
+    }
+    
+    .assessment__results-summary {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .assessment__results-actions {
+      flex-direction: column;
+    }
+  }
+  .assessment__already-passed {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    background-color: #f0f8ff;
+    border: 1px solid #b3d7ff;
+    border-left: 4px solid #0066cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .assessment__already-passed-icon {
+    font-size: 2.5rem;
+    color: #ffb700;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .assessment__already-passed-content {
+    flex: 1;
+  }
+  
+  .assessment__already-passed-content h3 {
+    margin: 0 0 8px 0;
+    color: #0066cc;
+    font-size: 1.2rem;
+  }
+  
+  .assessment__already-passed-content p {
+    margin: 0 0 5px 0;
+    color: #555;
+  }
+  
+  .assessment__previous-score {
+    font-weight: bold;
+    color: #0066cc;
+    font-size: 1.1rem;
+  }
+  
+  /* Certificate-related styles */
+  .assessment__certificate-notification {
+    background-color: #f0fff0;
+    border: 1px solid #c3e6c3;
+    border-left: 4px solid #28a745;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .assessment__certificate-icon {
+    font-size: 2.5rem;
+    color: #28a745;
+    margin-right: 20px;
+  }
+  
+  .assessment__certificate-content h3 {
+    margin: 0 0 8px 0;
+    color: #28a745;
+  }
+  
+  .assessment__certificate-content p {
+    margin: 0 0 10px 0;
+  }
+  
+  .assessment__certificate-button {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s;
+  }
+  
+  .assessment__certificate-button:hover {
+    background-color: #218838;
+    text-decoration: none;
+  }

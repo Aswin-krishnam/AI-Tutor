@@ -1,0 +1,567 @@
+/* ProgressDashboard.css */
+
+.progress__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333;
+}
+
+.progress__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.progress__header-left {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.progress__header-left h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  margin-left: 15px;
+}
+
+.progress__header-right {
+  display: flex;
+  align-items: center;
+}
+
+.progress__back-btn {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  color: #495057;
+  padding: 8px 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.progress__back-btn:hover {
+  background-color: #e9ecef;
+}
+
+.progress__back-btn svg {
+  margin-right: 8px;
+}
+
+.progress__overall {
+  margin-left: 20px;
+}
+
+.progress__overall-label {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.progress__overall-bar-container {
+  width: 200px;
+  height: 10px;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress__overall-bar {
+  height: 100%;
+  background-color: #0066cc;
+  border-radius: 5px;
+  transition: width 0.5s ease-in-out;
+}
+
+.progress__overall-percentage {
+  font-weight: 600;
+  text-align: right;
+  color: #0066cc;
+  margin-top: 5px;
+}
+
+/* Certificate Banner */
+.progress__certificate-banner {
+  display: flex;
+  align-items: center;
+  background-color: #f0fff4;
+  border: 1px solid #c3e6cb;
+  border-left: 5px solid #28a745;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.progress__certificate-icon {
+  font-size: 2.5rem;
+  color: #28a745;
+  margin-right: 20px;
+}
+
+.progress__certificate-content {
+  flex: 1;
+}
+
+.progress__certificate-content h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.4rem;
+  color: #28a745;
+}
+
+.progress__certificate-content p {
+  margin: 0 0 15px 0;
+}
+
+.progress__certificate-btn,
+.progress__view-certificate-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.progress__certificate-btn:hover,
+.progress__view-certificate-btn:hover {
+  background-color: #218838;
+  text-decoration: none;
+  color: white;
+}
+
+.progress__certificate-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.progress__certificate-btn svg,
+.progress__view-certificate-btn svg {
+  margin-right: 8px;
+}
+
+.progress__spinner-inline {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Content Area */
+.progress__content {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+}
+
+.progress__modules-list h2 {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.progress__modules-list h2 svg {
+  margin-right: 10px;
+  color: #0066cc;
+}
+
+.progress__module-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.progress__module-card {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.progress__module-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.progress__module-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.progress__module-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background-color: #0066cc;
+  color: white;
+  border-radius: 50%;
+  font-weight: 600;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.progress__module-title {
+  font-weight: 600;
+  flex: 1;
+}
+
+.progress__module-content {
+  padding: 15px;
+}
+
+.progress__module-description {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.progress__module-status {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+}
+
+.progress__status-icon {
+  margin-right: 10px;
+}
+
+.progress__status-passed .progress__status-icon {
+  color: #28a745;
+}
+
+.progress__status-completed .progress__status-icon {
+  color: #17a2b8;
+}
+
+.progress__status-assessment-pending .progress__status-icon {
+  color: #ffc107;
+}
+
+.progress__status-not-started .progress__status-icon {
+  color: #6c757d;
+}
+
+.progress__status-label {
+  font-weight: 500;
+}
+
+.progress__module-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.progress__action-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.progress__action-view {
+  background-color: #0066cc;
+  color: white;
+}
+
+.progress__action-view:hover {
+  background-color: #0056b3;
+}
+
+.progress__action-assessment {
+  background-color: #6f42c1;
+  color: white;
+  text-decoration: none;
+}
+
+.progress__action-assessment:hover {
+  background-color: #5e37a6;
+  color: white;
+  text-decoration: none;
+}
+
+.progress__action-btn svg {
+  margin-right: 6px;
+}
+
+.progress__score-badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #28a745;
+  border: 1px solid #28a745;
+}
+
+.progress__score-badge svg {
+  color: #ffb700;
+  margin-right: 5px;
+}
+
+/* Assessment Summary */
+.progress__assessment-summary {
+  margin-bottom: 30px;
+}
+
+.progress__assessment-summary h2 {
+  display: flex;
+  align-items: center;
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.progress__assessment-summary h2 svg {
+  color: #6f42c1;
+  margin-right: 10px;
+}
+
+.progress__assessment-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.progress__stat-item {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e9ecef;
+}
+
+.progress__stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0066cc;
+  margin-bottom: 10px;
+}
+
+.progress__stat-label {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* Certificate Status */
+.progress__certificate-status {
+  margin-bottom: 30px;
+}
+
+.progress__certificate-status h2 {
+  display: flex;
+  align-items: center;
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.progress__certificate-status h2 svg {
+  color: #28a745;
+  margin-right: 10px;
+}
+
+.progress__certificate-card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.progress__certificate-card.progress__eligible {
+  background-color: #f0fff4;
+  border: 1px solid #c3e6cb;
+}
+
+.progress__certificate-card.progress__not-eligible {
+  background-color: #fff4f0;
+  border: 1px solid #f5c6cb;
+}
+
+.progress__certificate-status-icon {
+  font-size: 2rem;
+  margin-right: 20px;
+}
+
+.progress__eligible .progress__certificate-status-icon {
+  color: #28a745;
+}
+
+.progress__not-eligible .progress__certificate-status-icon {
+  color: #dc3545;
+}
+
+.progress__certificate-status-content {
+  flex: 1;
+}
+
+.progress__certificate-status-content h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+}
+
+.progress__eligible .progress__certificate-status-content h3 {
+  color: #28a745;
+}
+
+.progress__not-eligible .progress__certificate-status-content h3 {
+  color: #dc3545;
+}
+
+.progress__get-certificate-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: 500;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.progress__get-certificate-btn:hover {
+  background-color: #218838;
+}
+
+.progress__get-certificate-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.progress__get-certificate-btn svg {
+  margin-right: 8px;
+}
+
+/* Loading and Error States */
+.progress__loading,
+.progress__error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+}
+
+.progress__spinner {
+  font-size: 2rem;
+  color: #0066cc;
+  margin-bottom: 20px;
+  animation: spin 1s linear infinite;
+}
+
+.progress__error-icon {
+  font-size: 3rem;
+  color: #dc3545;
+  margin-bottom: 20px;
+}
+
+.progress__error h2 {
+  margin-bottom: 10px;
+}
+
+.progress__error p {
+  margin-bottom: 20px;
+  color: #6c757d;
+}
+
+.progress__btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.progress__btn-primary {
+  background-color: #0066cc;
+  color: white;
+}
+
+.progress__btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .progress__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .progress__header-right {
+    margin-top: 15px;
+    width: 100%;
+  }
+  
+  .progress__overall {
+    margin-left: 0;
+    margin-top: 15px;
+    width: 100%;
+  }
+  
+  .progress__overall-bar-container {
+    width: 100%;
+  }
+  
+  .progress__module-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .progress__assessment-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .progress__certificate-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .progress__certificate-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  
+  .progress__certificate-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .progress__certificate-status-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}

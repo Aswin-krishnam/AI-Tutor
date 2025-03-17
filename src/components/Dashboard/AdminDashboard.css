@@ -1,0 +1,452 @@
+.aitut_admin_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
+
+.aitut_admin_loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 1.2rem;
+    color: #7f8c8d;
+}
+
+.aitut_admin_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.aitut_admin_title h1 {
+    font-size: 2.2rem;
+    margin: 0 0 0.5rem 0;
+    color: #2c3e50;
+}
+
+.aitut_admin_subtitle {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin: 0;
+}
+
+.aitut_admin_actions {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.aitut_admin_action_btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.aitut_admin_action_btn:hover {
+    background-color: #2980b9;
+}
+
+/* Study Materials button in top nav */
+.aitut_admin_studymat_btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.aitut_admin_logout_btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.aitut_admin_logout_btn:hover {
+    background-color: #c0392b;
+}
+
+.aitut_admin_stats_overview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.aitut_admin_stat_card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.aitut_admin_stat_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.aitut_admin_stat_icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.aitut_admin_stat_content {
+    flex-grow: 1;
+}
+
+.aitut_admin_stat_content h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    color: #7f8c8d;
+    font-weight: 600;
+}
+
+.aitut_admin_stat_number {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    color: #2c3e50;
+}
+
+.aitut_admin_main_content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.aitut_admin_content_section {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.aitut_admin_section_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.aitut_admin_section_header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+.aitut_admin_view_all_btn {
+    background: none;
+    border: none;
+    color: #3498db;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.aitut_admin_view_all_btn:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+.aitut_admin_table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.aitut_admin_table th,
+.aitut_admin_table td {
+    padding: 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.aitut_admin_table th {
+    font-weight: 600;
+    color: #7f8c8d;
+}
+
+.aitut_admin_role_badge {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    border-radius: 99px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.aitut_admin_role_admin {
+    background-color: #9b59b6;
+    color: white;
+}
+
+.aitut_admin_role_user {
+    background-color: #3498db;
+    color: white;
+}
+
+.aitut_admin_edit_btn {
+    background-color: #f1c40f;
+    color: #7f8c8d;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.aitut_admin_edit_btn:hover {
+    background-color: #f39c12;
+}
+
+.aitut_admin_analytics_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1rem;
+}
+
+.aitut_admin_analytics_card {
+    padding: 1rem;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    transition: transform 0.3s;
+}
+
+.aitut_admin_analytics_card:hover {
+    transform: translateY(-5px);
+}
+
+.aitut_admin_analytics_card h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    font-weight: 600;
+}
+
+.aitut_admin_analytics_value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+    color: #2c3e50;
+}
+
+.aitut_admin_analytics_unit {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #7f8c8d;
+    margin-left: 0.2rem;
+}
+
+.aitut_admin_analytics_desc {
+    font-size: 0.85rem;
+    color: #95a5a6;
+    margin: 0;
+}
+
+.aitut_admin_quick_actions h2 {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+.aitut_admin_action_buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.aitut_admin_quick_action_btn {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center;
+}
+
+.aitut_admin_quick_action_btn:hover {
+    background-color: #34495e;
+    transform: translateY(-3px);
+}
+
+/* Specific quick action buttons */
+.aitut_admin_user_btn {
+    background-color: #e67e22;
+}
+
+.aitut_admin_user_btn:hover {
+    background-color: #d35400;
+}
+
+.aitut_admin_coursemanage_btn {
+    background-color: #27ae60;
+}
+
+.aitut_admin_coursemanage_btn:hover {
+    background-color: #219955;
+}
+
+.aitut_admin_studymaterial_btn {
+    background-color: #0066cc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aitut_admin_studymaterial_btn:hover {
+    background-color: #0055aa;
+}
+
+.aitut_admin_coursecreate_btn {
+    background-color: #8e44ad;
+}
+
+.aitut_admin_coursecreate_btn:hover {
+    background-color: #7d3c98;
+}
+
+.aitut_admin_reports_btn {
+    background-color: #2c3e50;
+}
+
+.aitut_admin_reports_btn:hover {
+    background-color: #1a252f;
+}
+
+/* Quick action button with icon */
+.aitut_admin_quick_action_btn svg {
+    margin-right: 8px;
+}
+
+.aitut_admin_course_preview {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.aitut_admin_preview_card {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 180px;
+    display: flex;
+    position: relative;
+}
+
+/* Different card types with unique styles */
+.aitut_admin_courses_card {
+    background: linear-gradient(135deg, #4361ee 0%, #3a56d4 100%);
+}
+
+.aitut_admin_studymat_card {
+    background: linear-gradient(135deg, #0066cc 0%, #0055aa 100%);
+    display: flex;
+    align-items: center;
+}
+
+.aitut_admin_addcourse_card {
+    background: linear-gradient(135deg, #27ae60 0%, #219955 100%);
+    display: flex;
+    align-items: center;
+}
+
+.aitut_admin_preview_icon {
+    font-size: 32px;
+    color: white;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.aitut_admin_preview_content {
+    padding: 1.5rem;
+    color: white;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.aitut_admin_preview_content h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.aitut_admin_preview_content p {
+    margin: 0 0 1.5rem 0;
+    opacity: 0.9;
+    max-width: 85%;
+}
+
+.aitut_admin_preview_btn {
+    align-self: flex-start;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.aitut_admin_preview_btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 1024px) {
+    .aitut_admin_main_content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .aitut_admin_header {
+        flex-direction: column;
+    }
+    
+    .aitut_admin_actions {
+        margin-top: 1rem;
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    
+    .aitut_admin_stats_overview {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .aitut_admin_stats_overview {
+        grid-template-columns: 1fr;
+    }
+    
+    .aitut_admin_actions {
+        flex-direction: column;
+    }
+    
+    .aitut_admin_action_btn,
+    .aitut_admin_logout_btn {
+        width: 100%;
+    }
+}

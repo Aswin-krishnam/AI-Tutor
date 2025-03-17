@@ -1,0 +1,783 @@
+/* DiscussionView.css */
+
+.dv__container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+  }
+  
+  /* Header and Navigation */
+  .dv__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  
+  .dv__back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f0f2f5;
+    border: none;
+    margin-right: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .dv__back-button:hover {
+    background-color: #e4e6eb;
+  }
+  
+  .dv__breadcrumbs {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .dv__breadcrumb-link {
+    color: #4b6cb7;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .dv__breadcrumb-link:hover {
+    color: #3a5999;
+    text-decoration: underline;
+  }
+  
+  .dv__breadcrumb-separator {
+    margin: 0 8px;
+    color: #999;
+  }
+  
+  /* Discussion Container */
+  .dv__discussion-container {
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .dv__discussion-header {
+    margin-bottom: 20px;
+  }
+  
+  .dv__discussion-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    color: #333;
+    line-height: 1.4;
+  }
+  
+  .dv__discussion-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .dv__author-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .dv__author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e8f0fe;
+    color: #4b6cb7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+  }
+  
+  .dv__author-name {
+    font-weight: 500;
+    font-size: 15px;
+  }
+  
+  .dv__discussion-stats {
+    display: flex;
+    gap: 16px;
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .dv__stat {
+    display: flex;
+    align-items: center;
+  }
+  
+  .dv__stat svg {
+    margin-right: 6px;
+    font-size: 13px;
+  }
+  
+  .dv__tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .dv__tags-icon {
+    color: #666;
+    margin-right: 8px;
+  }
+  
+  .dv__tag {
+    background-color: #e8f0fe;
+    color: #1a73e8;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 13px;
+  }
+  
+  .dv__discussion-content {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    white-space: pre-wrap;
+  }
+  
+  /* AI Summary */
+  .dv__ai-summary {
+    background-color: #f0f7ff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #4b6cb7;
+    overflow: hidden;
+  }
+  
+  .dv__ai-header {
+    background-color: #e0f0ff;
+    padding: 10px 16px;
+    font-weight: 500;
+    color: #2c5282;
+    display: flex;
+    align-items: center;
+  }
+  
+  .dv__ai-header svg {
+    margin-right: 8px;
+    font-size: 14px;
+  }
+  
+  .dv__ai-content {
+    padding: 16px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  
+  .dv__discussion-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+  }
+  
+  .dv__ai-assist-button {
+    display: flex;
+    align-items: center;
+    background-color: #e8f0fe;
+    color: #1a73e8;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .dv__ai-assist-button:hover {
+    background-color: #d2e3fc;
+  }
+  
+  .dv__ai-assist-button svg {
+    margin-right: 8px;
+  }
+  
+  /* Comments Section */
+  .dv__comments-header {
+    margin-bottom: 16px;
+  }
+  
+  .dv__comments-header h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .dv__comments-header h2 svg {
+    margin-right: 8px;
+    color: #4b6cb7;
+  }
+  
+  .dv__comments-container {
+    margin-bottom: 32px;
+  }
+  
+  .dv__comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .dv__comment {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0f0;
+    position: relative;
+  }
+  
+  .dv__comment-answer {
+    border-left: 4px solid #4caf50;
+    background-color: #f8fff8;
+  }
+  
+  .dv__answer-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+  }
+  
+  .dv__answer-badge svg {
+    margin-right: 4px;
+    font-size: 10px;
+  }
+  
+  .dv__comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+  }
+  
+  .dv__comment-author {
+    display: flex;
+    align-items: center;
+  }
+  
+  .dv__author-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dv__comment-time {
+    font-size: 12px;
+    color: #757575;
+    margin-top: 2px;
+  }
+  
+  .dv__ai-badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: #e0f7fa;
+    color: #00838f;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-size: 11px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  
+  .dv__ai-badge svg {
+    margin-right: 3px;
+    font-size: 9px;
+  }
+  
+  .dv__comment-votes {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .dv__vote-button {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-size: 12px;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .dv__vote-button:hover {
+    background-color: #e8e8e8;
+  }
+  
+  .dv__vote-button svg {
+    margin-right: 4px;
+    font-size: 11px;
+  }
+  
+  .dv__vote-button.dv__voted {
+    background-color: #e8f0fe;
+    color: #1a73e8;
+  }
+  
+  .dv__comment-content {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    white-space: pre-wrap;
+  }
+  
+  .dv__comment-actions {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .dv__reply-button,
+  .dv__mark-answer-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    color: #4b6cb7;
+    font-size: 13px;
+    padding: 4px 0;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .dv__reply-button:hover,
+  .dv__mark-answer-button:hover {
+    color: #3a5999;
+    text-decoration: underline;
+  }
+  
+  .dv__reply-button svg,
+  .dv__mark-answer-button svg {
+    margin-right: 4px;
+    font-size: 11px;
+  }
+  
+  /* Replies */
+  .dv__replies {
+    margin-top: 16px;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 2px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .dv__reply {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 16px;
+    position: relative;
+  }
+  
+  .dv__reply-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+  }
+  
+  .dv__reply-content {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    white-space: pre-wrap;
+  }
+  
+  .dv__reply-actions {
+    display: flex;
+    gap: 12px;
+    font-size: 12px;
+  }
+  
+  .dv__no-comments {
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    color: #666;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Add Comment Section */
+  .dv__add-comment {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .dv__replying-to {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .dv__replying-to p {
+    margin: 0;
+  }
+  
+  .dv__quoted-text {
+    display: block;
+    color: #666;
+    font-style: italic;
+    margin-top: 4px;
+  }
+  
+  .dv__cancel-reply {
+    background: none;
+    border: none;
+    color: #d32f2f;
+    font-size: 13px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  
+  .dv__cancel-reply:hover {
+    text-decoration: underline;
+  }
+  
+  .dv__comment-input-container {
+    margin-bottom: 12px;
+  }
+  
+  .dv__comment-input {
+    width: 100%;
+    min-height: 120px;
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    resize: vertical;
+    font-family: inherit;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .dv__comment-input:focus {
+    outline: none;
+    border-color: #4b6cb7;
+    box-shadow: 0 0 0 2px rgba(75, 108, 183, 0.1);
+  }
+  
+  .dv__comment-actions-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .dv__ai-assist-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .dv__checkbox-text {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-left: 6px;
+  }
+  
+  .dv__checkbox-text svg {
+    margin-right: 6px;
+    color: #1a73e8;
+  }
+  
+  .dv__submit-comment {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #4b6cb7, #182848);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .dv__submit-comment:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dv__submit-comment:disabled {
+    background: #b0bec5;
+    transform: none;
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+  
+  .dv__spinner {
+    animation: spin 1.5s linear infinite;
+    margin-right: 8px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* AI Dialog */
+  .dv__ai-dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .dv__ai-dialog {
+    background-color: white;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dv__ai-dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .dv__ai-dialog-header h2 {
+    margin: 0;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    color: #333;
+  }
+  
+  .dv__ai-dialog-header h2 svg {
+    margin-right: 8px;
+    color: #1a73e8;
+  }
+  
+  .dv__ai-dialog-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #757575;
+    cursor: pointer;
+  }
+  
+  .dv__ai-dialog-content {
+    padding: 24px;
+    overflow-y: auto;
+    flex: 1;
+  }
+  
+  .dv__ai-dialog-info {
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 14px;
+  }
+  
+  .dv__ai-question-input {
+    width: 100%;
+    min-height: 120px;
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    resize: vertical;
+    font-family: inherit;
+    margin-bottom: 20px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .dv__ai-question-input:focus {
+    outline: none;
+    border-color: #4b6cb7;
+    box-shadow: 0 0 0 2px rgba(75, 108, 183, 0.1);
+  }
+  
+  .dv__ai-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+  
+  .dv__button {
+    display: flex;
+    align-items: center;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+  }
+  
+  .dv__button-primary {
+    background: linear-gradient(135deg, #4b6cb7, #182848);
+    color: white;
+  }
+  
+  .dv__button-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dv__button-primary:disabled {
+    background: #b0bec5;
+    transform: none;
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+  
+  .dv__button-secondary {
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .dv__button-secondary:hover {
+    background-color: #e8e8e8;
+  }
+  
+  .dv__button svg {
+    margin-right: 6px;
+  }
+  
+  /* Loading and Error States */
+  .dv__loading,
+  .dv__error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .dv__loading .dv__spinner {
+    font-size: 32px;
+    color: #4b6cb7;
+    margin-bottom: 16px;
+  }
+  
+  .dv__error h2 {
+    color: #d32f2f;
+    margin-bottom: 12px;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .dv__container {
+      padding: 16px;
+    }
+    
+    .dv__discussion-container {
+      padding: 16px;
+    }
+    
+    .dv__discussion-meta {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    
+    .dv__discussion-stats {
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    
+    .dv__comment,
+    .dv__reply {
+      padding: 16px;
+    }
+    
+    .dv__comment-header {
+      flex-direction: column;
+      gap: 12px;
+    }
+    
+    .dv__comment-votes {
+      align-self: flex-end;
+    }
+    
+    .dv__replies {
+      margin-left: 10px;
+      padding-left: 10px;
+    }
+    
+    .dv__comment-actions-row {
+      flex-direction: column;
+      gap: 12px;
+    }
+    
+    .dv__submit-comment {
+      width: 100%;
+      justify-content: center;
+    }
+    
+    .dv__replying-to {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .dv__cancel-reply {
+      margin-top: 8px;
+    }
+    
+    .dv__ai-dialog {
+      width: 95%;
+      max-height: 90vh;
+    }
+    
+    .dv__ai-dialog-actions {
+      flex-direction: column-reverse;
+    }
+    
+    .dv__ai-dialog-actions .dv__button {
+      width: 100%;
+      justify-content: center;
+    }
+  }

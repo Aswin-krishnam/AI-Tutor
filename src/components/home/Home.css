@@ -1,0 +1,1717 @@
+/* Neurale Learn Home.css with vibrant design and animations */
+
+/* Base styles and variables */
+:root {
+  --primary-color: #5e17eb;
+  --primary-dark: #4512b7;
+  --primary-light: #efe7ff;
+  --secondary-color: #ff5d5d;
+  --secondary-dark: #e54545;
+  --accent-color: #00d4ff;
+  --accent-secondary: #ff9d00;
+  --dark-color: #1a103c;
+  --gray-dark: #3d3a4e;
+  --gray-medium: #6c6a7e;
+  --gray-light: #f4f2ff;
+  --success-color: #00e676;
+  --warning-color: #ffdc3c;
+  --box-shadow: 0 10px 30px rgba(94, 23, 235, 0.15);
+  --card-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --border-radius: 16px;
+  --border-radius-sm: 8px;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(0.8);
+  }
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+
+@keyframes neuron-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+}
+
+@keyframes neural-connection {
+  0% {
+    opacity: 0.1;
+    stroke-dashoffset: 1000;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0.3;
+  }
+}
+
+@keyframes counter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes particle-float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.3;
+  }
+  25% {
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-20px) translateX(15px);
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.8;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--dark-color);
+  line-height: 1.6;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+.neurale-container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color), var(--accent-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% auto;
+  animation: gradient-shift 3s ease infinite;
+  display: inline-block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.3px;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+section {
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated Section Headers */
+.neurale-section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  position: relative;
+}
+
+.neurale-section-header h2 {
+  margin-bottom: 16px;
+  position: relative;
+  display: inline-block;
+}
+
+.neurale-section-header p {
+  font-size: 1.2rem;
+  color: var(--gray-medium);
+  opacity: 0.9;
+}
+
+/* Animation States for Scroll Reveal */
+section.animate .neurale-section-header h2 {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+section.animate .neurale-section-header p {
+  animation: fadeInUp 0.8s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+/* Button styles with animations */
+.neurale-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: var(--transition);
+  border: none;
+  outline: none;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  gap: 8px;
+}
+
+.neurale-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(-100%);
+  transition: var(--transition);
+  z-index: -1;
+}
+
+.neurale-btn:hover::before {
+  transform: translateX(0);
+}
+
+.neurale-btn .icon {
+  transition: var(--transition);
+}
+
+.neurale-btn:hover .icon {
+  transform: translateX(3px);
+}
+
+.neurale-btn-primary {
+  background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
+  color: white;
+  box-shadow: 0 4px 15px rgba(94, 23, 235, 0.3);
+}
+
+.neurale-btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(94, 23, 235, 0.5);
+  transform: translateY(-3px);
+}
+
+.neurale-btn-secondary {
+  background-color: white;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-light);
+  padding: 12px 26px;
+}
+
+.neurale-btn-secondary:hover {
+  background-color: var(--primary-light);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(94, 23, 235, 0.2);
+}
+
+.neurale-btn-outline {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  background-color: transparent;
+  padding: 12px 26px;
+}
+
+.neurale-btn-outline:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.neurale-btn-cta {
+  background: linear-gradient(90deg, var(--secondary-color), var(--accent-secondary));
+  color: white;
+  font-size: 1.2rem;
+  padding: 16px 32px;
+  box-shadow: 0 4px 20px rgba(255, 93, 93, 0.4);
+}
+
+.neurale-btn-cta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(255, 93, 93, 0.6);
+}
+
+.neurale-btn-login {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--primary-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 10px 20px;
+}
+
+.neurale-btn-login:hover {
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* Navbar with animations */
+.neurale-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  background-color: transparent;
+  transition: var(--transition);
+  z-index: 1000;
+  backdrop-filter: blur(0);
+}
+
+.neurale-navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  padding: 15px 0;
+}
+
+.neurale-navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.neurale-logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.neurale-logo:hover {
+  transform: scale(1.05);
+}
+
+.neurale-logo-icon {
+  font-size: 1.8rem;
+  margin-right: 8px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.neurale-nav-links ul {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.neurale-nav-links button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--dark-color);
+  transition: var(--transition);
+  padding: 5px;
+  position: relative;
+}
+
+.neurale-nav-links button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  transition: var(--transition);
+}
+
+.neurale-nav-links button:hover {
+  color: var(--primary-color);
+}
+
+.neurale-nav-links button:hover::after {
+  width: 100%;
+}
+
+.neurale-nav-cta {
+  margin-left: 10px;
+}
+
+.neurale-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  width: 30px;
+  height: 25px;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.neurale-menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--primary-color);
+  border-radius: 3px;
+  transition: var(--transition);
+}
+
+/* Hero Section with floating animations */
+.neurale-hero {
+  padding: 180px 0 100px;
+  background: linear-gradient(135deg, #f8f7ff 0%, var(--primary-light) 100%);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.neurale-hero .neurale-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.neurale-hero-content {
+  flex: 1;
+  max-width: 600px;
+  position: relative;
+  z-index: 5;
+}
+
+.neurale-hero h1 {
+  margin-bottom: 20px;
+  color: var(--dark-color);
+  position: relative;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.2s forwards;
+}
+
+.neurale-hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--gray-dark);
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.4s forwards;
+}
+
+.neurale-hero-cta {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.6s forwards;
+}
+
+.neurale-badge {
+  display: inline-block;
+  background: linear-gradient(90deg, #FF9933, #FFFFFF, #138808);
+  background-size: 200% auto;
+  animation: gradient-shift 3s ease infinite;
+  color: var(--dark-color);
+  font-weight: 600;
+  padding: 7px 15px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.neurale-hero-stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 50px;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.8s forwards;
+}
+
+.neurale-stat {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.neurale-stat-number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  animation: counter 1.5s ease-out forwards;
+}
+
+.neurale-stat-label {
+  font-size: 0.9rem;
+  color: var(--gray-medium);
+}
+
+.neurale-hero-visual {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 5;
+  opacity: 0;
+  animation: fadeInLeft 0.8s ease-out 0.6s forwards;
+}
+
+.neurale-brain-animation {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.neurale-brain-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  box-shadow: 0 0 40px rgba(94, 23, 235, 0.2);
+  animation: pulse 5s ease-in-out infinite;
+}
+
+.neurale-brain-neuron {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--primary-color);
+  animation: neuron-pulse 3s infinite;
+}
+
+.neurale-brain-neuron.n1 {
+  top: 30%;
+  left: 20%;
+  animation-delay: 0.5s;
+}
+
+.neurale-brain-neuron.n2 {
+  top: 70%;
+  left: 30%;
+  animation-delay: 1s;
+}
+
+.neurale-brain-neuron.n3 {
+  top: 40%;
+  left: 70%;
+  animation-delay: 1.5s;
+}
+
+.neurale-brain-neuron.n4 {
+  top: 20%;
+  left: 50%;
+  animation-delay: 2s;
+}
+
+.neurale-brain-neuron.n5 {
+  top: 60%;
+  left: 60%;
+  animation-delay: 2.5s;
+}
+
+.neurale-brain-connections {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, transparent 30%, rgba(94, 23, 235, 0.1) 70%);
+  opacity: 0.7;
+}
+
+.neurale-hero-wave {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath fill='%23ffffff' d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' opacity='.25'%3E%3C/path%3E%3Cpath fill='%23ffffff' d='M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z' opacity='.5'%3E%3C/path%3E%3Cpath fill='%23ffffff' d='M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z'%3E%3C/path%3E%3C/svg%3E");
+  background-size: cover;
+}
+
+.neurale-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: particle-float 15s infinite linear;
+}
+
+.particle:nth-child(odd) {
+  background: var(--accent-color);
+  width: 12px;
+  height: 12px;
+}
+
+.particle:nth-child(3n) {
+  background: var(--accent-secondary);
+  width: 6px;
+  height: 6px;
+}
+
+.particle:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; animation-duration: 20s; }
+.particle:nth-child(2) { top: 20%; left: 80%; animation-delay: 1s; animation-duration: 18s; }
+.particle:nth-child(3) { top: 30%; left: 20%; animation-delay: 2s; animation-duration: 16s; }
+.particle:nth-child(4) { top: 40%; left: 70%; animation-delay: 3s; animation-duration: 22s; }
+.particle:nth-child(5) { top: 50%; left: 30%; animation-delay: 4s; animation-duration: 19s; }
+.particle:nth-child(6) { top: 60%; left: 60%; animation-delay: 5s; animation-duration: 21s; }
+.particle:nth-child(7) { top: 70%; left: 40%; animation-delay: 6s; animation-duration: 15s; }
+.particle:nth-child(8) { top: 80%; left: 50%; animation-delay: 7s; animation-duration: 17s; }
+.particle:nth-child(9) { top: 90%; left: 90%; animation-delay: 8s; animation-duration: 23s; }
+.particle:nth-child(10) { top: 5%; left: 45%; animation-delay: 9s; animation-duration: 20s; }
+.particle:nth-child(11) { top: 15%; left: 75%; animation-delay: 10s; animation-duration: 18s; }
+.particle:nth-child(12) { top: 25%; left: 15%; animation-delay: 11s; animation-duration: 16s; }
+.particle:nth-child(13) { top: 35%; left: 65%; animation-delay: 12s; animation-duration: 22s; }
+.particle:nth-child(14) { top: 45%; left: 25%; animation-delay: 13s; animation-duration: 19s; }
+.particle:nth-child(15) { top: 55%; left: 55%; animation-delay: 14s; animation-duration: 21s; }
+.particle:nth-child(16) { top: 65%; left: 35%; animation-delay: 15s; animation-duration: 15s; }
+.particle:nth-child(17) { top: 75%; left: 45%; animation-delay: 16s; animation-duration: 17s; }
+.particle:nth-child(18) { top: 85%; left: 85%; animation-delay: 17s; animation-duration: 23s; }
+.particle:nth-child(19) { top: 95%; left: 50%; animation-delay: 18s; animation-duration: 20s; }
+.particle:nth-child(20) { top: 10%; left: 60%; animation-delay: 19s; animation-duration: 18s; }
+
+/* How it works section with step animations */
+.neurale-how-it-works {
+  background-color: white;
+  position: relative;
+}
+
+.neurale-steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+}
+
+.neurale-step {
+  flex: 1;
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: var(--border-radius);
+  background-color: white;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+  position: relative;
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+section.animate .neurale-step:nth-child(1) {
+  animation: fadeInUp 0.6s ease-out 0.3s forwards;
+}
+
+section.animate .neurale-step:nth-child(3) {
+  animation: fadeInUp 0.6s ease-out 0.6s forwards;
+}
+
+section.animate .neurale-step:nth-child(5) {
+  animation: fadeInUp 0.6s ease-out 0.9s forwards;
+}
+
+.neurale-step:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.neurale-step-icon {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.neurale-step-number {
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  position: relative;
+  z-index: 5;
+}
+
+.neurale-icon-container {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary-light), white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -55px auto 0;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(94, 23, 235, 0.1);
+}
+
+.neurale-icon {
+  font-size: 2.5rem;
+}
+
+.neurale-step h3 {
+  margin-bottom: 15px;
+  color: var(--dark-color);
+}
+
+.neurale-step p {
+  color: var(--gray-medium);
+}
+
+.neurale-connector {
+  flex: 0.5;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  margin-top: 80px;
+  position: relative;
+  opacity: 0;
+}
+
+section.animate .neurale-connector:nth-child(2) {
+  animation: fadeIn 0.6s ease-out 0.5s forwards;
+}
+
+section.animate .neurale-connector:nth-child(4) {
+  animation: fadeIn 0.6s ease-out 0.8s forwards;
+}
+
+.neurale-connector::before,
+.neurale-connector::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.neurale-connector::before {
+  left: 0;
+}
+
+.neurale-connector::after {
+  right: 0;
+}
+
+/* Features Section with card animations */
+.neurale-feature-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.neurale-feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.neurale-feature-icon span {
+  display: inline-block;
+  font-size: 3rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.neurale-feature-card h3 {
+  margin-bottom: 15px;
+  color: var(--dark-color);
+  position: relative;
+  z-index: 2;
+}
+
+.neurale-feature-card p {
+  color: var(--gray-medium);
+  position: relative;
+  z-index: 2;
+}
+
+.neurale-feature-hover-effect {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(135deg, var(--primary-light) 0%, rgba(255, 255, 255, 0.5) 100%);
+  transition: var(--transition);
+  z-index: 1;
+  border-radius: var(--border-radius);
+}
+
+.neurale-feature-card:hover .neurale-feature-hover-effect {
+  height: 100%;
+}
+
+.neurale-features-bg-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.neurale-shapes-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.neurale-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.5;
+  filter: blur(50px);
+}
+
+.neurale-shape.s1 {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(94, 23, 235, 0.3);
+  top: -150px;
+  left: -100px;
+  animation: float 15s ease-in-out infinite;
+}
+
+.neurale-shape.s2 {
+  width: 400px;
+  height: 400px;
+  background-color: rgba(0, 212, 255, 0.2);
+  bottom: -200px;
+  right: -150px;
+  animation: float 20s ease-in-out infinite reverse;
+}
+
+.neurale-shape.s3 {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 157, 0, 0.2);
+  top: 30%;
+  right: 20%;
+  animation: float 18s ease-in-out infinite 2s;
+}
+
+.neurale-shape.s4 {
+  width: 250px;
+  height: 250px;
+  background-color: rgba(94, 23, 235, 0.15);
+  bottom: 20%;
+  left: 15%;
+  animation: float 12s ease-in-out infinite 1s;
+}
+
+/* About Section with map animations */
+.neurale-about {
+  background-color: white;
+  position: relative;
+}
+
+.neurale-about-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.neurale-about-text {
+  flex: 1;
+  opacity: 0;
+}
+
+section.animate .neurale-about-text {
+  animation: fadeInRight 0.8s ease-out 0.3s forwards;
+}
+
+.neurale-about-intro {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.neurale-about-text p {
+  margin-bottom: 20px;
+  color: var(--gray-dark);
+}
+
+.neurale-about-visual {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  position: relative;
+  min-height: 400px;
+}
+
+section.animate .neurale-about-visual {
+  animation: fadeInLeft 0.8s ease-out 0.5s forwards;
+}
+
+.neurale-india-map-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.neurale-india-map {
+  width: 300px;
+  height: 400px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400'%3E%3Cpath fill='%23efe7ff' d='M62.4,20.3c0,0,7.1,3.5,11.8,5.9s9.5,2.4,12.4,8.3c2.9,5.9,9.5,5.9,13,7.1s3.5,5.9,11.8,5.9c8.3,0,9.5,3.5,14.2,4.7c4.7,1.2,7.1,0,11.8,3.5c4.7,3.5,9.5,3.5,14.2,4.7c4.7,1.2,5.9,5.9,11.8,7.1c5.9,1.2,4.7,5.9,9.5,8.3c4.7,2.4,8.3,4.7,9.5,9.5c1.2,4.7,5.9,2.4,8.3,7.1c2.4,4.7,8.3,4.7,9.5,9.5c1.2,4.7,7.1,4.7,9.5,8.3c2.4,3.5,7.1,2.4,9.5,5.9c2.4,3.5,5.9,3.5,8.3,7.1c2.4,3.5,7.1,2.4,8.3,7.1c1.2,4.7,5.9,5.9,7.1,10.6c1.2,4.7,4.7,5.9,5.9,10.6c1.2,4.7,4.7,4.7,4.7,9.5c0,4.7,2.4,5.9,2.4,10.6c0,4.7,1.2,7.1,0,11.8c-1.2,4.7-2.4,7.1-4.7,11.8c-2.4,4.7-3.5,7.1-7.1,10.6c-3.5,3.5-5.9,4.7-10.6,7.1c-4.7,2.4-7.1,3.5-11.8,5.9c-4.7,2.4-7.1,4.7-11.8,7.1c-4.7,2.4-7.1,4.7-11.8,7.1c-4.7,2.4-7.1,4.7-11.8,7.1c-4.7,2.4-7.1,4.7-11.8,7.1c-4.7,2.4-7.1,4.7-11.8,7.1c-4.7,2.4-7.1,4.7-11.8,7.1s-8.3,2.4-12.4,5.9c-4.1,3.5-8.3,3.5-12.4,7.1c-4.1,3.5-8.3,3.5-12.4,7.1c-4.1,3.5-8.3,3.5-12.4,7.1c-4.1,3.5-9.5,0-11.8,5.9c-2.4,5.9-8.3,3.5-9.5,9.5c-1.2,5.9-7.1,4.7-7.1,10.6s-5.9,5.9-5.9,11.8c0,5.9-3.5,7.1-3.5,12.9c0,5.9-1.2,8.3-1.2,14.2c0,5.9,0,8.3,0,14.2c0,5.9,0,8.3,0,14.2c0,5.9,1.2,8.3,1.2,14.2c0,5.9,2.4,7.1,2.4,12.9c0,5.9,3.5,7.1,3.5,12.9'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.neurale-map-dot {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  box-shadow: 0 0 15px var(--primary-color);
+  animation: pulse 3s infinite;
+}
+
+.neurale-map-dot.d1 {
+  top: 25%;
+  left: 30%;
+  animation-delay: 0.2s;
+}
+
+.neurale-map-dot.d2 {
+  top: 60%;
+  left: 40%;
+  animation-delay: 0.5s;
+}
+
+.neurale-map-dot.d3 {
+  top: 35%;
+  left: 60%;
+  animation-delay: 0.8s;
+}
+
+.neurale-map-dot.d4 {
+  top: 15%;
+  left: 45%;
+  animation-delay: 1.1s;
+}
+
+.neurale-map-dot.d5 {
+  top: 45%;
+  left: 20%;
+  animation-delay: 1.4s;
+}
+
+.neurale-map-dot.d6 {
+  top: 75%;
+  left: 55%;
+  animation-delay: 1.7s;
+}
+
+.neurale-map-connections {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='400'%3E%3Cline x1='90' y1='100' x2='120' y2='240' stroke='%235e17eb' stroke-width='1.5' stroke-dasharray='5,5' opacity='0.5'/%3E%3Cline x1='120' y1='240' x2='180' y2='140' stroke='%235e17eb' stroke-width='1.5' stroke-dasharray='5,5' opacity='0.5'/%3E%3Cline x1='180' y1='140' x2='135' y2='60' stroke='%235e17eb' stroke-width='1.5' stroke-dasharray='5,5' opacity='0.5'/%3E%3Cline x1='135' y1='60' x2='60' y2='180' stroke='%235e17eb' stroke-width='1.5' stroke-dasharray='5,5' opacity='0.5'/%3E%3Cline x1='60' y1='180' x2='165' y2='300' stroke='%235e17eb' stroke-width='1.5' stroke-dasharray='5,5' opacity='0.5'/%3E%3Cline x1='165' y1='300' x2='180' y2='140' stroke='%235e17eb' stroke-width='1.5' stroke-dasharray='5,5' opacity='0.5'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+}
+
+/* Users Section with flipcards */
+.neurale-users {
+  background-color: var(--gray-light);
+  position: relative;
+}
+
+.neurale-users-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.neurale-user-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 30px;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+section.animate .neurale-user-card:nth-child(1) {
+  animation: fadeInUp 0.6s ease-out 0.2s forwards;
+}
+
+section.animate .neurale-user-card:nth-child(2) {
+  animation: fadeInUp 0.6s ease-out 0.4s forwards;
+}
+
+section.animate .neurale-user-card:nth-child(3) {
+  animation: fadeInUp 0.6s ease-out 0.6s forwards;
+}
+
+section.animate .neurale-user-card:nth-child(4) {
+  animation: fadeInUp 0.6s ease-out 0.8s forwards;
+}
+
+.neurale-user-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.neurale-user-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+}
+
+.neurale-user-card h3 {
+  margin-bottom: 15px;
+  color: var(--primary-color);
+  position: relative;
+}
+
+.neurale-user-benefits {
+  list-style: none;
+  padding-left: 5px;
+}
+
+.neurale-user-benefits li {
+  margin-bottom: 12px;
+  color: var(--gray-dark);
+  position: relative;
+  padding-left: 25px;
+}
+
+.neurale-user-benefits li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent-secondary);
+  font-weight: bold;
+}
+
+.neurale-card-decoration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, var(--primary-light) 0%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 0 var(--border-radius) 0 50%;
+  z-index: -1;
+  opacity: 0.5;
+  transition: var(--transition);
+}
+
+.neurale-user-card:hover .neurale-card-decoration {
+  width: 150px;
+  height: 150px;
+  opacity: 0.8;
+}
+
+/* Testimonials Section with sliding animations */
+.neurale-testimonials {
+  background-color: white;
+  position: relative;
+}
+
+.neurale-testimonial-slider {
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  opacity: 0;
+}
+
+section.animate .neurale-testimonial-slider {
+  animation: fadeIn 0.8s ease-out 0.3s forwards;
+}
+
+.neurale-testimonial-inner {
+  display: flex;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.neurale-testimonial-slide {
+  min-width: 100%;
+  padding: 0 10px;
+}
+
+.neurale-testimonial-content {
+  background: linear-gradient(135deg, var(--primary-light) 0%, white 100%);
+  border-radius: var(--border-radius);
+  padding: 40px;
+  box-shadow: var(--card-shadow);
+  position: relative;
+  transition: var(--transition);
+}
+
+.neurale-testimonial-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.neurale-testimonial-content::before {
+  content: '"';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 5rem;
+  color: rgba(94, 23, 235, 0.1);
+  font-family: serif;
+  line-height: 1;
+}
+
+.neurale-testimonial-quote {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.neurale-testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.neurale-author-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--primary-light);
+  border: 3px solid white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.neurale-author-name {
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+.neurale-author-role {
+  font-size: 0.9rem;
+  color: var(--gray-medium);
+}
+
+.neurale-testimonial-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.neurale-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--gray-light);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.neurale-dot.active {
+  background-color: var(--primary-color);
+  transform: scale(1.3);
+}
+
+/* Call to Action with animated background */
+.neurale-cta {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-secondary) 100%);
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.neurale-cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+.neurale-cta h2 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  opacity: 0;
+}
+
+section.animate .neurale-cta h2 {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.neurale-cta p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0;
+}
+
+section.animate .neurale-cta p {
+  animation: fadeInUp 0.8s ease-out 0.2s forwards;
+}
+
+section.animate .neurale-cta .neurale-btn {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.4s forwards;
+}
+
+.neurale-cta-secondary {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  opacity: 0;
+}
+
+section.animate .neurale-cta-secondary {
+  animation: fadeInUp 0.8s ease-out 0.6s forwards;
+}
+
+.neurale-cta-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.neurale-cta-circles {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.neurale-cta-circles.c1 {
+  width: 300px;
+  height: 300px;
+  top: -150px;
+  left: -100px;
+  animation: float 15s ease-in-out infinite;
+}
+
+.neurale-cta-circles.c2 {
+  width: 200px;
+  height: 200px;
+  bottom: -100px;
+  right: 10%;
+  animation: float 10s ease-in-out infinite reverse;
+}
+
+.neurale-cta-circles.c3 {
+  width: 150px;
+  height: 150px;
+  top: 30%;
+  right: 30%;
+  animation: float 12s ease-in-out infinite 1s;
+}
+
+/* Footer with wave effect */
+.neurale-footer {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 80px 0 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.neurale-footer-wave {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath fill='%231a103c' d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z'%3E%3C/path%3E%3C/svg%3E");
+  background-size: cover;
+  transform: rotate(180deg);
+}
+
+.neurale-footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
+.neurale-footer-brand {
+  grid-column: span 2;
+}
+
+.neurale-footer-brand p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+.neurale-social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.neurale-social-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  border: none;
+  color: white;
+}
+
+.neurale-social-btn:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+.social-icon {
+  font-size: 1.2rem;
+}
+
+.neurale-footer-col h4 {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.neurale-footer-col h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+.neurale-footer-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.neurale-footer-col ul li a,
+.neurale-footer-col ul li button {
+  color: rgba(255, 255, 255, 0.7);
+  transition: var(--transition);
+  background: none;
+  border: none;
+  font-size: 1rem;
+  text-align: left;
+  padding: 0;
+}
+
+.neurale-footer-col ul li a:hover,
+.neurale-footer-col ul li button:hover {
+  color: white;
+  transform: translateX(5px);
+}
+
+.neurale-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.neurale-language-selector select {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.made-in-india {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 3px 8px;
+  background: linear-gradient(90deg, #FF9933, #FFFFFF, #138808);
+  background-size: 200% auto;
+  animation: gradient-shift 3s ease infinite;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+  .neurale-hero .neurale-container {
+    flex-direction: column;
+  }
+  
+  .neurale-hero-content {
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .neurale-hero-cta {
+    justify-content: center;
+  }
+  
+  .neurale-hero-stats {
+    justify-content: center;
+  }
+  
+  .neurale-about-content {
+    flex-direction: column;
+  }
+  
+  .neurale-footer-brand {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 80px 0;
+  }
+  
+  .neurale-menu-toggle {
+    display: flex;
+  }
+  
+  .neurale-nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: var(--transition);
+  }
+  
+  .neurale-nav-links.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  
+  .neurale-nav-links ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .neurale-nav-cta {
+    margin: 10px 0 0;
+  }
+  
+  .neurale-steps {
+    flex-direction: column;
+  }
+  
+  .neurale-connector {
+    width: 3px;
+    height: 50px;
+    margin: 0 auto;
+  }
+  
+  .neurale-connector::before,
+  .neurale-connector::after {
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  
+  .neurale-connector::before {
+    top: 0;
+  }
+  
+  .neurale-connector::after {
+    top: auto;
+    bottom: 0;
+  }
+  
+  .neurale-footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 60px 0;
+  }
+  
+  .neurale-hero {
+    padding: 120px 0 60px;
+  }
+  
+  .neurale-hero-cta {
+    flex-direction: column;
+  }
+  
+  .neurale-hero-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .neurale-section-header {
+    margin-bottom: 40px;
+  }
+  
+  .neurale-testimonial-content {
+    padding: 30px 20px;
+  }
+}
+s {
+  background-color: var(--primary-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.neurale-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  position: relative;
+  z-index: 5;
+}
+
+.neurale-feature-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 30px;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+section.animate .neurale-feature-card:nth-child(4) {
+  animation: fadeInUp 0.6s ease-out 0.5s forwards;
+}
+
+section.animate .neurale-feature-card:nth-child(5) {
+  animation: fadeInUp 0.6s ease-out 0.6s forwards;
+}
+
+section.animate .neurale-feature-card:nth-child(6) {
+  animation: fadeInUp 0.6s ease-out 0.7s forwards;
+}
+
+.neurale-feature-card:nth-child(1) {
+  animation: fadeInUp 0.6s ease-out 0.2s forwards;
+}
+
+section.animate .neurale-feature-card:nth-child(2) {
+  animation: fadeInUp 0.6s ease-out 0.3s forwards;
+}
+
+section.animate .neurale-feature-card:nth-child(3) {
+  animation: fadeInUp 0.6s ease-out 0.4s forwards;
+}
+
+section.animate .neurale-feature-card {
+  opacity: 1;
+  transform: translateY(0);
+}

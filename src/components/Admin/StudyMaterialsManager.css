@@ -1,0 +1,1020 @@
+.aitut_studymat_manager {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .aitut_studymat_manager_header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  
+  .aitut_studymat_manager_header h1 {
+    flex-grow: 1;
+    margin: 0 0 0 16px;
+    font-size: 1.6rem;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .aitut_studymat_back_button {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #444;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .aitut_studymat_back_button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .aitut_studymat_back_button svg {
+    margin-right: 8px;
+  }
+  
+  .aitut_studymat_manager_container {
+    display: flex;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  /* Modules sidebar */
+  .aitut_studymat_modules_sidebar {
+    width: 280px;
+    background-color: #f9f9f9;
+    border-right: 1px solid #e0e0e0;
+    padding: 0;
+    flex-shrink: 0;
+  }
+  
+  .aitut_studymat_modules_sidebar h2 {
+    padding: 16px;
+    margin: 0;
+    font-size: 1.1rem;
+    color: #444;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #f3f3f3;
+  }
+  
+  .aitut_studymat_modules_list {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+  }
+  
+  .aitut_studymat_module_item {
+    display: flex;
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .aitut_studymat_module_item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .aitut_studymat_module_item.selected {
+    background-color: #e7f3ff;
+    border-left: 4px solid #0066cc;
+  }
+  
+  .aitut_studymat_module_number {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0066cc;
+    color: white;
+    border-radius: 50%;
+    margin-right: 12px;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+  
+  .aitut_studymat_module_info {
+    flex-grow: 1;
+  }
+  
+  .aitut_studymat_module_title {
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  
+  .aitut_studymat_material_status {
+    font-size: 12px;
+    color: #4caf50;
+  }
+  
+  .aitut_studymat_material_status.missing {
+    color: #f44336;
+  }
+  
+  /* Content area */
+  .aitut_studymat_content_area {
+    flex-grow: 1;
+    padding: 0;
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .aitut_studymat_module_title_bar {
+    padding: 16px 20px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .aitut_studymat_module_title_bar h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .aitut_studymat_content_actions {
+    display: flex;
+    gap: 10px;
+    padding: 12px 20px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .aitut_studymat_content_actions button {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .aitut_studymat_edit_button {
+    background-color: #f0f0f0;
+    color: #444;
+  }
+  
+  .aitut_studymat_edit_button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .aitut_studymat_save_button {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .aitut_studymat_save_button:hover {
+    background-color: #388e3c;
+  }
+  
+  .aitut_studymat_add_podcast_button {
+    background-color: #9c27b0;
+    color: white;
+  }
+  
+  .aitut_studymat_add_podcast_button:hover {
+    background-color: #7b1fa2;
+  }
+  
+  .aitut_studymat_filter_button {
+    background-color: #ff9800;
+    color: white;
+  }
+  
+  .aitut_studymat_filter_button:hover {
+    background-color: #f57c00;
+  }
+  
+  .aitut_studymat_content_actions button svg {
+    margin-right: 8px;
+  }
+  
+  /* Filter panel */
+  .aitut_studymat_filter_panel {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+    flex-wrap: wrap;
+  }
+  
+  .aitut_studymat_search_box {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0 12px;
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .aitut_studymat_search_icon {
+    color: #666;
+    margin-right: 8px;
+  }
+  
+  .aitut_studymat_search_box input {
+    flex: 1;
+    border: none;
+    padding: 10px 0;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .aitut_studymat_category_filter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+  
+  .aitut_studymat_category_filter label {
+    font-weight: 500;
+    color: #444;
+    white-space: nowrap;
+  }
+  
+  .aitut_studymat_category_filter select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: white;
+  }
+  
+  .aitut_studymat_clear_filters_btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+  }
+  
+  .aitut_studymat_clear_filters_btn:hover {
+    background-color: #d32f2f;
+  }
+  
+  .aitut_studymat_filter_info {
+    background-color: #e8f4fd;
+    padding: 10px 16px;
+    margin: 0 20px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #0066cc;
+    border-left: 4px solid #0066cc;
+  }
+  
+  .aitut_studymat_filter_term {
+    font-weight: bold;
+    background-color: #fff3cd;
+    padding: 2px 6px;
+    border-radius: 3px;
+  }
+  
+  .aitut_studymat_filter_category {
+    font-weight: bold;
+    background-color: #d1ecf1;
+    padding: 2px 6px;
+    border-radius: 3px;
+  }
+  
+  .aitut_studymat_no_matches {
+    color: #856404;
+    background-color: #fff3cd;
+    padding: 16px;
+    border-radius: 4px;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  /* Editor */
+  .aitut_studymat_editor_container {
+    display: flex;
+    height: calc(100vh - 260px);
+    padding: 20px;
+  }
+  
+  .aitut_studymat_markdown_editor {
+    flex-grow: 1;
+    height: 100%;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: none;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .aitut_studymat_editor_help {
+    width: 200px;
+    padding: 16px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    font-size: 13px;
+  }
+  
+  .aitut_studymat_editor_help h3 {
+    margin-top: 0;
+    font-size: 16px;
+    color: #444;
+  }
+  
+  .aitut_studymat_editor_help p {
+    margin: 8px 0;
+    color: #666;
+    font-family: monospace;
+  }
+  
+  /* Content display */
+  .aitut_studymat_content_display {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .aitut_studymat_no_content {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+  }
+  
+  .aitut_studymat_create_button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    margin-top: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .aitut_studymat_create_button:hover {
+    background-color: #0055aa;
+  }
+  
+  .aitut_studymat_create_button svg {
+    margin-right: 8px;
+  }
+  
+  /* Markdown content styling */
+  .aitut_studymat_markdown_content {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+  }
+  
+  .aitut_studymat_rendered_markdown {
+    padding: 30px;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Rendered markdown typography */
+  .aitut_studymat_rendered_markdown h1 {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+    color: #333;
+  }
+  
+  .aitut_studymat_rendered_markdown h2 {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .aitut_studymat_rendered_markdown h3 {
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #333;
+  }
+  
+  .aitut_studymat_rendered_markdown h4 {
+    font-size: 1.2rem;
+    margin-top: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #333;
+  }
+  
+  .aitut_studymat_rendered_markdown p {
+    margin: 0 0 1rem;
+    line-height: 1.6;
+  }
+  
+  .aitut_studymat_rendered_markdown ul, 
+  .aitut_studymat_rendered_markdown ol {
+    margin: 0 0 1rem;
+    padding-left: 2rem;
+  }
+  
+  .aitut_studymat_rendered_markdown li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .aitut_studymat_rendered_markdown code {
+    background-color: #f5f5f5;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    font-size: 0.9rem;
+    color: #e53935;
+  }
+  
+  .aitut_studymat_rendered_markdown pre {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 1rem 0;
+  }
+  
+  .aitut_studymat_rendered_markdown pre code {
+    background-color: transparent;
+    padding: 0;
+    color: #333;
+    display: block;
+    line-height: 1.5;
+  }
+  
+  .aitut_studymat_rendered_markdown a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  
+  .aitut_studymat_rendered_markdown a:hover {
+    text-decoration: underline;
+  }
+  
+  .aitut_studymat_rendered_markdown blockquote {
+    border-left: 4px solid #0066cc;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    background-color: #f5f9ff;
+    color: #444;
+  }
+  
+  .aitut_studymat_rendered_markdown table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1rem 0;
+  }
+  
+  .aitut_studymat_rendered_markdown th,
+  .aitut_studymat_rendered_markdown td {
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    text-align: left;
+  }
+  
+  .aitut_studymat_rendered_markdown th {
+    background-color: #f5f5f5;
+  }
+  
+  .aitut_studymat_rendered_markdown tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .aitut_studymat_highlight {
+    background-color: #fff3cd;
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+  
+  /* Podcasts section */
+  .aitut_studymat_podcasts_section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .aitut_studymat_podcasts_section h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.2rem;
+  }
+  
+  .aitut_studymat_no_podcasts {
+    color: #888;
+    font-style: italic;
+  }
+  
+  .aitut_studymat_podcasts_list {
+    margin-top: 16px;
+  }
+  
+  .aitut_studymat_podcast_item {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .aitut_studymat_podcast_info h4 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .aitut_studymat_podcast_info p {
+    margin-top: 0;
+    color: #666;
+  }
+  
+  .aitut_studymat_podcast_player {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .aitut_studymat_podcast_player audio {
+    flex-grow: 1;
+    margin-right: 12px;
+  }
+  
+  .aitut_studymat_delete_podcast_btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .aitut_studymat_delete_podcast_btn:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Modal */
+  .aitut_studymat_modal_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .aitut_studymat_modal_content {
+    background-color: white;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .aitut_studymat_modal_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .aitut_studymat_modal_header h2 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #333;
+  }
+  
+  .aitut_studymat_close_modal_btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #888;
+    cursor: pointer;
+  }
+  
+  .aitut_studymat_close_modal_btn:hover {
+    color: #444;
+  }
+  
+  .aitut_studymat_podcast_form {
+    padding: 20px;
+  }
+  
+  .aitut_studymat_form_group {
+    margin-bottom: 16px;
+  }
+  
+  .aitut_studymat_form_group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #444;
+  }
+  
+  .aitut_studymat_form_group input[type="text"],
+  .aitut_studymat_form_group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .aitut_studymat_form_group textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  .aitut_studymat_file_info {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #666;
+  }
+  
+  .aitut_studymat_form_actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 24px;
+  }
+  
+  .aitut_studymat_cancel_btn {
+    background-color: #f0f0f0;
+    color: #444;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .aitut_studymat_cancel_btn:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .aitut_studymat_submit_btn {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .aitut_studymat_submit_btn:hover {
+    background-color: #0055aa;
+  }
+  
+  .aitut_studymat_submit_btn:disabled {
+    background-color: #b0c4de;
+    cursor: not-allowed;
+  }
+  
+  .aitut_studymat_loading, .aitut_studymat_error_container {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+  }
+  
+  .aitut_studymat_error_container h2 {
+    color: #f44336;
+  }
+  
+  .aitut_studymat_error_container button {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 16px;
+    margin-top: 16px;
+    cursor: pointer;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 960px) {
+    .aitut_studymat_manager_container {
+      flex-direction: column;
+    }
+    
+    .aitut_studymat_modules_sidebar {
+      width: 100%;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    
+    .aitut_studymat_filter_panel {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    .aitut_studymat_category_filter {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .aitut_studymat_content_actions {
+      flex-wrap: wrap;
+    }
+  }
+  /* Module badges for materials and assessments */
+.aitut_studymat_module_badges {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.aitut_studymat_material_status,
+.aitut_studymat_assessment_status {
+  font-size: 0.7rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+.aitut_studymat_material_status.missing,
+.aitut_studymat_assessment_status.missing {
+  background-color: #f5f5f5;
+  color: #757575;
+}
+
+.aitut_studymat_assessment_status {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.aitut_studymat_assessment_status.missing {
+  background-color: #f5f5f5;
+  color: #757575;
+}
+
+/* Module actions */
+.aitut_studymat_module_actions {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.aitut_studymat_module_assessment_btn {
+  background: none;
+  border: none;
+  color: #4a6ee0;
+  padding: 0.4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.aitut_studymat_module_assessment_btn:hover {
+  background-color: rgba(74, 110, 224, 0.1);
+}
+
+/* Sidebar actions */
+.aitut_studymat_sidebar_actions {
+  padding: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid #e1e4e8;
+}
+
+.aitut_studymat_assessment_mgmt_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #f0f4ff;
+  border: 1px solid #4a6ee0;
+  border-radius: 4px;
+  color: #4a6ee0;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.aitut_studymat_assessment_mgmt_button svg {
+  margin-right: 0.5rem;
+}
+
+.aitut_studymat_assessment_mgmt_button:hover {
+  background-color: #e3eaff;
+}
+
+/* Assessment button in content actions */
+.aitut_studymat_assessment_button {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  background-color: #e8f5e9;
+  border: 1px solid #2e7d32;
+  color: #2e7d32;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.aitut_studymat_assessment_button svg {
+  margin-right: 0.5rem;
+}
+
+.aitut_studymat_assessment_button:hover {
+  background-color: #c8e6c9;
+}
+
+/* Assessment section in content display */
+.aitut_studymat_assessment_section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 6px;
+  background-color: #f8f9fa;
+  border: 1px solid #e1e4e8;
+}
+
+.aitut_studymat_assessment_section h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.aitut_studymat_assessment_info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.aitut_studymat_assessment_status {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.aitut_studymat_assessment_icon {
+  color: #2e7d32;
+  font-size: 1.5rem;
+  margin-top: 0.25rem;
+}
+
+.aitut_studymat_assessment_details {
+  flex: 1;
+}
+
+.aitut_studymat_assessment_badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.aitut_studymat_assessment_details p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.aitut_studymat_assessment_actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.aitut_studymat_edit_assessment_btn,
+.aitut_studymat_view_results_btn {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.aitut_studymat_edit_assessment_btn {
+  background-color: #f0f4ff;
+  border: 1px solid #4a6ee0;
+  color: #4a6ee0;
+}
+
+.aitut_studymat_edit_assessment_btn:hover {
+  background-color: #e3eaff;
+}
+
+.aitut_studymat_view_results_btn {
+  background-color: #fff8e1;
+  border: 1px solid #ffa000;
+  color: #ffa000;
+}
+
+.aitut_studymat_view_results_btn:hover {
+  background-color: #ffecb3;
+}
+
+.aitut_studymat_edit_assessment_btn svg,
+.aitut_studymat_view_results_btn svg {
+  margin-right: 0.4rem;
+}
+
+.aitut_studymat_no_assessment {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.aitut_studymat_no_assessment p {
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.aitut_studymat_generate_assessment_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0.6rem 1.2rem;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.aitut_studymat_generate_assessment_btn:hover {
+  background-color: #1b5e20;
+}
+
+.aitut_studymat_generate_assessment_btn svg {
+  margin-right: 0.5rem;
+}
+
+/* Responsive adjustments for assessment components */
+@media (max-width: 768px) {
+  .aitut_studymat_assessment_info {
+    flex-direction: column;
+  }
+  
+  .aitut_studymat_assessment_actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .aitut_studymat_edit_assessment_btn,
+  .aitut_studymat_view_results_btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .aitut_studymat_content_actions {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .aitut_studymat_assessment_button {
+    flex: 1;
+    justify-content: center;
+  }
+}

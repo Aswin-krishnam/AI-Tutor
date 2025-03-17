@@ -1,0 +1,105 @@
+/* AIInsightsFormatter.css */
+.ai-insights-container {
+    background-color: #f0f7ff;
+    border-radius: 8px;
+    border-left: 4px solid #4b6cb7;
+    margin-bottom: 20px;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .ai-insights-header {
+    background-color: #e0f0ff;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    color: #2c5282;
+    border-bottom: 1px solid rgba(75, 108, 183, 0.2);
+  }
+  
+  .ai-insights-header .ai-icon {
+    margin-right: 8px;
+    color: #4b6cb7;
+    display: flex;
+    align-items: center;
+  }
+  
+  .ai-insights-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .ai-insights-content {
+    padding: 16px;
+  }
+  
+  .ai-section {
+    margin-bottom: 20px;
+  }
+  
+  .ai-section:last-child {
+    margin-bottom: 0;
+  }
+  
+  .ai-section-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #2d3748;
+    margin-top: 0;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .ai-section-content p {
+    margin-top: 0;
+    margin-bottom: 12px;
+    line-height: 1.6;
+    font-size: 14px;
+    color: #4a5568;
+  }
+  
+  .ai-section-content p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Styling for lists if present in AI-generated content */
+  .ai-section-content ul,
+  .ai-section-content ol {
+    padding-left: 20px;
+    margin-bottom: 12px;
+  }
+  
+  .ai-section-content li {
+    margin-bottom: 6px;
+  }
+  
+  /* Styling for questions in AI content */
+  .ai-section-content strong {
+    color: #2c5282;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .ai-insights-container {
+      border-radius: 6px;
+    }
+    
+    .ai-insights-header {
+      padding: 10px 14px;
+    }
+    
+    .ai-insights-content {
+      padding: 12px;
+    }
+    
+    .ai-section-title {
+      font-size: 14px;
+    }
+    
+    .ai-section-content p {
+      font-size: 13px;
+    }
+  }

@@ -1,0 +1,490 @@
+/* NewDiscussion.css */
+
+.nd__container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+  }
+  
+  /* Header */
+  .nd__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+  
+  .nd__back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f0f2f5;
+    border: none;
+    margin-right: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .nd__back-button:hover {
+    background-color: #e4e6eb;
+  }
+  
+  .nd__title-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nd__title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    color: #1a237e;
+  }
+  
+  .nd__subtitle {
+    font-size: 14px;
+    color: #666;
+    margin: 4px 0 0 0;
+  }
+  
+  /* Form */
+  .nd__form {
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .nd__form-group {
+    margin-bottom: 24px;
+  }
+  
+  .nd__label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .nd__input,
+  .nd__textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-family: inherit;
+  }
+  
+  .nd__input:focus,
+  .nd__textarea:focus {
+    outline: none;
+    border-color: #4b6cb7;
+    box-shadow: 0 0 0 2px rgba(75, 108, 183, 0.1);
+  }
+  
+  .nd__textarea {
+    resize: vertical;
+    min-height: 200px;
+  }
+  
+  /* Content header with AI help button */
+  .nd__content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .nd__ai-help-button {
+    display: flex;
+    align-items: center;
+    background-color: #e8f0fe;
+    color: #1a73e8;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .nd__ai-help-button:hover {
+    background-color: #d2e3fc;
+  }
+  
+  .nd__ai-help-button svg {
+    margin-right: 6px;
+  }
+  
+  .nd__spinner {
+    animation: spin 1.5s linear infinite;
+    margin-right: 6px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Tags */
+  .nd__tags-container {
+    margin-top: 8px;
+  }
+  
+  .nd__tags-input-container {
+    display: flex;
+    margin-bottom: 8px;
+  }
+  
+  .nd__tags-input {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px 0 0 8px;
+    font-size: 14px;
+  }
+  
+  .nd__tags-input:focus {
+    outline: none;
+    border-color: #4b6cb7;
+  }
+  
+  .nd__add-tag-button {
+    padding: 10px 14px;
+    border: 1px solid #4b6cb7;
+    background-color: #4b6cb7;
+    color: white;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .nd__add-tag-button:hover {
+    background-color: #3a5999;
+  }
+  
+  .nd__add-tag-button:disabled {
+    background-color: #b0bec5;
+    border-color: #b0bec5;
+    cursor: not-allowed;
+  }
+  
+  .nd__tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .nd__tag {
+    display: flex;
+    align-items: center;
+    background-color: #e8f0fe;
+    color: #1a73e8;
+    padding: 6px 10px;
+    border-radius: 16px;
+    font-size: 13px;
+  }
+  
+  .nd__remove-tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6px;
+    background: none;
+    border: none;
+    color: #1a73e8;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0 2px;
+  }
+  
+  .nd__tags-hint {
+    font-size: 12px;
+    color: #757575;
+    margin: 4px 0 0 0;
+  }
+  
+  /* AI assist toggle */
+  .nd__ai-assist-toggle {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nd__checkbox-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .nd__checkbox-container input {
+    margin-right: 8px;
+  }
+  
+  .nd__checkbox-label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .nd__checkbox-label svg {
+    margin-right: 6px;
+    color: #1a73e8;
+  }
+  
+  /* Tooltip */
+  .nd__tooltip {
+    position: relative;
+    display: inline-block;
+    margin-left: 12px;
+    color: #757575;
+  }
+  
+  .nd__tooltip-text {
+    visibility: hidden;
+    width: 300px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  
+  .nd__tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+  }
+  
+  .nd__tooltip:hover .nd__tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  /* Form actions */
+  .nd__form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 32px;
+  }
+  
+  .nd__button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+  }
+  
+  .nd__button-primary {
+    background: linear-gradient(135deg, #4b6cb7, #182848);
+    color: white;
+  }
+  
+  .nd__button-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nd__button-primary:disabled {
+    background: #b0bec5;
+    transform: none;
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+  
+  .nd__button-secondary {
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .nd__button-secondary:hover {
+    background-color: #e8e8e8;
+  }
+  
+  .nd__button svg {
+    margin-right: 6px;
+  }
+  
+  /* Error message */
+  .nd__error-message {
+    display: flex;
+    align-items: center;
+    background-color: #ffebee;
+    color: #d32f2f;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .nd__error-message svg {
+    margin-right: 8px;
+  }
+  
+  /* Loading state */
+  .nd__loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+  }
+  
+  .nd__loading .nd__spinner {
+    font-size: 32px;
+    color: #4b6cb7;
+    margin-bottom: 16px;
+  }
+  
+  /* AI Dialog */
+  .nd__ai-dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .nd__ai-dialog {
+    background-color: white;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 700px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .nd__ai-dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .nd__ai-dialog-header h2 {
+    margin: 0;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    color: #333;
+  }
+  
+  .nd__ai-dialog-header h2 svg {
+    margin-right: 8px;
+    color: #1a73e8;
+  }
+  
+  .nd__ai-dialog-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #757575;
+    cursor: pointer;
+  }
+  
+  .nd__ai-dialog-content {
+    padding: 24px;
+    overflow-y: auto;
+    flex: 1;
+  }
+  
+  .nd__ai-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+  }
+  
+  .nd__ai-loading .nd__spinner {
+    font-size: 32px;
+    color: #4b6cb7;
+    margin-bottom: 16px;
+  }
+  
+  .nd__ai-content {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    margin-bottom: 24px;
+    max-height: 400px;
+    overflow-y: auto;
+    border-left: 4px solid #4b6cb7;
+  }
+  
+  .nd__ai-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .nd__container {
+      padding: 16px;
+    }
+    
+    .nd__form {
+      padding: 16px;
+    }
+    
+    .nd__content-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    
+    .nd__ai-help-button {
+      width: 100%;
+      justify-content: center;
+    }
+    
+    .nd__form-actions {
+      flex-direction: column;
+    }
+    
+    .nd__button {
+      width: 100%;
+      justify-content: center;
+    }
+    
+    .nd__ai-dialog {
+      width: 95%;
+      max-height: 90vh;
+    }
+  }

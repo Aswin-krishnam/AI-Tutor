@@ -1,0 +1,319 @@
+.aitut_studymat_dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .aitut_studymat_dash_header {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  
+  .aitut_studymat_dash_header h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .aitut_studymat_dash_header h1 svg {
+    margin-right: 12px;
+    color: #0066cc;
+  }
+  
+  .aitut_studymat_dash_header p {
+    color: #666;
+    font-size: 16px;
+  }
+  
+  .aitut_studymat_dash_courses_list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .aitut_studymat_dash_course_card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .aitut_studymat_dash_course_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .aitut_studymat_dash_course_header:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .aitut_studymat_dash_course_info {
+    flex-grow: 1;
+  }
+  
+  .aitut_studymat_dash_course_info h2 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .aitut_studymat_dash_course_meta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .aitut_studymat_dash_course_category, 
+  .aitut_studymat_dash_course_level, 
+  .aitut_studymat_dash_course_status {
+    font-size: 13px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background-color: #eee;
+    color: #555;
+  }
+  
+  .aitut_studymat_dash_course_status.published {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+  }
+  
+  .aitut_studymat_dash_course_status.draft {
+    background-color: #fff3e0;
+    color: #ef6c00;
+  }
+  
+  .aitut_studymat_dash_expansion_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+  }
+  
+  .aitut_studymat_dash_expansion_icon.expanded {
+    transform: rotate(90deg);
+  }
+  
+  .aitut_studymat_dash_course_details {
+    padding: 20px;
+    border-top: 1px solid #eee;
+  }
+  
+  .aitut_studymat_dash_details_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .aitut_studymat_dash_details_header h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #444;
+  }
+  
+  .aitut_studymat_dash_manage_link {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: #0066cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.2s;
+  }
+  
+  .aitut_studymat_dash_manage_link:hover {
+    background-color: #0055aa;
+  }
+  
+  .aitut_studymat_dash_modules_table_container {
+    overflow-x: auto;
+  }
+  
+  .aitut_studymat_dash_modules_table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .aitut_studymat_dash_modules_table th,
+  .aitut_studymat_dash_modules_table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .aitut_studymat_dash_modules_table th {
+    background-color: #f5f5f5;
+    font-weight: 500;
+    color: #444;
+  }
+  
+  .aitut_studymat_dash_modules_table tr {
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .aitut_studymat_dash_modules_table tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .aitut_studymat_dash_modules_table tr.has-material {
+    background-color: #f0f7ff;
+  }
+  
+  .aitut_studymat_dash_modules_table tr.has-material:hover {
+    background-color: #e3f2fd;
+  }
+  
+  .aitut_studymat_dash_modules_table tr.no-material {
+    background-color: #fff;
+  }
+  
+  .aitut_studymat_dash_module_name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+  }
+  
+  .aitut_studymat_dash_module_number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background-color: #0066cc;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .aitut_studymat_dash_material_status {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 13px;
+  }
+  
+  .aitut_studymat_dash_material_status.available {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+  }
+  
+  .aitut_studymat_dash_material_status.missing {
+    background-color: #ffebee;
+    color: #c62828;
+  }
+  
+  .aitut_studymat_dash_podcast_count {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 13px;
+    background-color: #e8eaf6;
+    color: #3949ab;
+  }
+  
+  .aitut_studymat_dash_podcast_count.empty {
+    background-color: #f5f5f5;
+    color: #757575;
+  }
+  
+  .aitut_studymat_dash_module_actions {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .aitut_studymat_dash_action_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-decoration: none;
+  }
+  
+  .aitut_studymat_dash_action_btn:hover {
+    opacity: 0.9;
+  }
+  
+  .aitut_studymat_dash_action_btn.edit-btn {
+    background-color: #0066cc;
+  }
+  
+  .aitut_studymat_dash_action_btn.podcast-btn {
+    background-color: #9c27b0;
+  }
+  
+  .aitut_studymat_dash_action_btn.pdf-btn {
+    background-color: #f44336;
+  }
+  
+  .aitut_studymat_dash_action_btn.pdf-btn:disabled {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+  }
+  
+  .aitut_studymat_dash_no_modules, 
+  .aitut_studymat_dash_no_courses {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+  }
+  
+  .aitut_studymat_dash_create_course_btn {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 16px;
+    padding: 10px 16px;
+    background-color: #0066cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.2s;
+  }
+  
+  .aitut_studymat_dash_create_course_btn:hover {
+    background-color: #0055aa;
+  }
+  
+  .aitut_studymat_dash_create_course_btn svg {
+    margin-right: 8px;
+  }
+  
+  .aitut_studymat_dash_loading {
+    text-align: center;
+    padding: 60px 20px;
+    color: #666;
+    font-size: 16px;
+  }
+  
+  .aitut_studymat_dash_error {
+    text-align: center;
+    padding: 60px 20px;
+    color: #f44336;
+  }
+  
+  .aitut_studymat_dash_error svg {
+    font-size: 40px;
+    margin-bottom: 16px;
+  }

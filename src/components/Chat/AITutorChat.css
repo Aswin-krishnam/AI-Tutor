@@ -1,0 +1,534 @@
+/* AITutorChat.css - Enhanced with new features and optimizations */
+
+/* Main container */
+.eduai__container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f8fafc;
+  color: #2d3748;
+}
+
+/* Header styles with back button */
+.eduai__header {
+  padding: 12px 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.eduai__header-left, .eduai__header-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.eduai__header-left {
+  justify-content: flex-start;
+}
+
+.eduai__header-right {
+  justify-content: flex-end;
+}
+
+.eduai__back-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: #4a5568;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.eduai__back-btn:hover {
+  background-color: #edf2f7;
+  color: #2d3748;
+}
+
+.eduai__back-btn svg {
+  font-size: 14px;
+}
+
+.eduai__logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.eduai__logo-icon {
+  font-size: 22px;
+  color: #3b82f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eduai__logo-text {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #3b82f6;
+}
+
+.eduai__tagline {
+  color: #718096;
+  margin: 0;
+  font-size: 15px;
+}
+
+/* Chat area */
+.eduai__chat-area {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 #f8fafc;
+  background-color: #f8fafc;
+}
+
+.eduai__chat-area::-webkit-scrollbar {
+  width: 8px;
+}
+
+.eduai__chat-area::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+.eduai__chat-area::-webkit-scrollbar-thumb {
+  background-color: #cbd5e0;
+  border-radius: 4px;
+}
+
+.eduai__welcome-card {
+  text-align: center;
+  margin: auto;
+  max-width: 520px;
+  padding: 32px 24px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  animation: fadeSlideUp 0.5s ease-out forwards;
+  border: 1px solid #e2e8f0;
+}
+
+@keyframes fadeSlideUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+.eduai__welcome-title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #2a4365;
+  font-size: 24px;
+}
+
+.eduai__welcome-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4a5568;
+  margin: 0;
+}
+
+/* Message styles */
+.eduai__message {
+  display: flex;
+  gap: 12px;
+  max-width: 82%;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.eduai__message-user {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.eduai__message-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+  background-color: #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.eduai__message-user .eduai__message-avatar {
+  background-color: #3182ce;
+  color: white;
+}
+
+.eduai__message-assistant .eduai__message-avatar {
+  background-color: #38a169;
+  color: white;
+}
+
+.eduai__message-bubble {
+  background-color: white;
+  padding: 14px 18px;
+  border-radius: 18px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  position: relative;
+  border: 1px solid #edf2f7;
+}
+
+.eduai__message-user .eduai__message-bubble {
+  background-color: #3182ce;
+  color: white;
+  border-top-right-radius: 4px;
+  border: none;
+}
+
+.eduai__message-assistant .eduai__message-bubble {
+  background-color: white;
+  border-top-left-radius: 4px;
+}
+
+.eduai__message-error .eduai__message-bubble {
+  background-color: #fff5f5;
+  border-left: 3px solid #e53e3e;
+}
+
+.eduai__context-badge {
+  font-size: 12px;
+  color: #2f855a;
+  background-color: #f0fff4;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.eduai__message-text {
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 15px;
+}
+
+.eduai__message-timestamp {
+  margin-top: 8px;
+  text-align: right;
+  font-size: 12px;
+  color: #718096;
+  opacity: 0.8;
+}
+
+.eduai__message-user .eduai__message-timestamp {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Streaming message styles */
+.eduai__message-streaming .eduai__message-text {
+  position: relative;
+}
+
+.eduai__message-streaming .eduai__message-text::after {
+  content: '|';
+  display: inline-block;
+  color: #3182ce;
+  animation: blink 1s step-end infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Typing indicator */
+.eduai__typing-indicator {
+  display: flex;
+  gap: 5px;
+  padding: 8px 4px;
+  align-items: center;
+}
+
+.eduai__typing-indicator span {
+  width: 8px;
+  height: 8px;
+  background-color: #cbd5e0;
+  border-radius: 50%;
+  animation: bounce 1.4s infinite ease-in-out;
+}
+
+.eduai__typing-indicator span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.eduai__typing-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.eduai__typing-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-5px); }
+}
+
+/* Suggestions */
+.eduai__suggestions-panel {
+  margin: 0 20px 20px;
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.5s ease-out;
+  border: 1px solid #e2e8f0;
+}
+
+.eduai__suggestions-title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.eduai__suggestions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.eduai__suggestion-btn {
+  background-color: #ebf8ff;
+  border: 1px solid #bee3f8;
+  border-radius: 10px;
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #2c5282;
+}
+
+.eduai__suggestion-btn:hover {
+  background-color: #bee3f8;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+.eduai__suggestion-btn:active {
+  transform: translateY(0);
+}
+
+.eduai__suggestion-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Introduction prompt in welcome card */
+.eduai__intro-prompt {
+  background-color: #fffde7;
+  border-left: 3px solid #ffd54f;
+  padding: 10px;
+  margin-top: 16px;
+  font-style: italic;
+  border-radius: 4px;
+  text-align: left;
+}
+
+/* Additional animation for streaming message */
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+.eduai__message-streaming .eduai__message-bubble {
+  animation: pulse 2s infinite;
+}
+
+/* Input area with auto-resizing textarea */
+.eduai__input-container {
+  padding: 16px 20px;
+  border-top: 1px solid #e2e8f0;
+  background-color: white;
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  position: sticky;
+  bottom: 0;
+  z-index: 5;
+}
+
+.eduai__input-textarea {
+  flex-grow: 1;
+  border: 1px solid #cbd5e0;
+  border-radius: 12px;
+  padding: 14px 16px;
+  resize: none;
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1.5;
+  min-height: 24px;
+  max-height: 120px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  overflow-y: auto;
+}
+
+.eduai__input-textarea:focus {
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+}
+
+.eduai__input-textarea:disabled {
+  background-color: #f7fafc;
+  cursor: not-allowed;
+}
+
+.eduai__send-btn {
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.eduai__send-btn:hover:not(:disabled) {
+  background-color: #3182ce;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.eduai__send-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.eduai__send-btn:disabled {
+  background-color: #cbd5e0;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.eduai__send-btn svg {
+  font-size: 18px;
+}
+
+/* Footer */
+.eduai__footer {
+  text-align: center;
+  padding: 12px;
+  font-size: 13px;
+  color: #718096;
+  border-top: 1px solid #e2e8f0;
+  background-color: white;
+}
+
+.eduai__footer-text {
+  margin: 0;
+}
+
+/* Profile Summary Styles */
+.eduai__profile-summary {
+  background-color: #f0f7ff;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin: 10px 20px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #4d7cfe;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.3s ease;
+}
+
+.eduai__profile-summary:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.eduai__profile-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 8px 0;
+}
+
+.eduai__interests {
+  font-size: 14px;
+  color: #4a5568;
+  margin-bottom: 10px;
+}
+
+.eduai__interests-label {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.eduai__subject-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.eduai__subject-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-right: 8px;
+}
+
+.eduai__subject-tag {
+  background-color: #e2e8f0;
+  color: #4a5568;
+  padding: 4px 10px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.eduai__subject-tag:hover {
+  background-color: #cbd5e0;
+  transform: translateY(-1px);
+}
