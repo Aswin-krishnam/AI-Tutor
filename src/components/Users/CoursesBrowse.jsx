@@ -190,25 +190,23 @@ const CoursesBrowse = () => {
 
     // Generate a color based on category for consistent coloring
     const getCategoryColor = (category) => {
+        // If no category is provided, return default blue
         if (!category) return '#4361ee';
         
+        // Define available colors
         const colors = [
-            '#4361ee', // primary
-            '#2ecc71', // green
-            '#9b59b6', // purple
-            '#e74c3c', // red
-            '#f39c12', // orange
-            '#1abc9c', // teal
-            '#3498db'  // blue
+            '#4361ee', '#2ecc71', '#9b59b6', '#e74c3c', 
+            '#f39c12', '#1abc9c', '#3498db'
         ];
         
-        // Simple hash function to get a consistent color for each category
+        // Calculate a simple hash value for the category name
         let hash = 0;
         for (let i = 0; i < category.length; i++) {
-            hash = category.charCodeAt(i) + ((hash << 5) - hash);
+            hash = hash + category.charCodeAt(i);
         }
         
-        return colors[Math.abs(hash) % colors.length];
+        // Use hash to select a color from the array
+        return colors[hash % colors.length];
     };
 
     const getLevelClass = (level) => {
