@@ -30,6 +30,9 @@ import MyProgress from './components/Users/Standalone/MyProgress';
 import ModuleForum from './components/Users/Forum/ModuleForum';
 import NewDiscussion from './components/Users/Forum/NewDiscussion';
 import DiscussionView from './components/Users/Forum/DiscussionView';
+import ManageUsers from './components/Admin/ManageUsers';
+import ReportsPage from './components/Admin/ReportsPage';
+import SettingsPage from './components/Admin/SettingsPage';
 
 
 
@@ -82,6 +85,9 @@ function App() {
         <Route path="/admin/study-materials" element={<StudyMaterialsDashboard />} />
         <Route path="/admin/courses/:courseId/assessments" element={<AssessmentManagement />} />
         <Route path="/admin/assessment/:assessmentId" element={<AssessmentEditor />} />
+        <Route path="/admin/users" element={<ManageUsers />} />
+        <Route path="/admin/reports" element={<ReportsPage />} />
+        <Route path="/admin/settings" element={<SettingsPage />} />
       </Routes>
     </BrowserRouter>
   );

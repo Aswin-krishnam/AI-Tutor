@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { FaBook, FaExclamationTriangle, FaPlus, FaPodcast, FaFilePdf, FaChevronRight } from "react-icons/fa";
 import "./StudyMaterialsDashboard.css";
+import AdminSidebar from "./AdminSidebar";
 
 const StudyMaterialsDashboard = () => {
   const [courses, setCourses] = useState([]);
@@ -121,6 +122,8 @@ const StudyMaterialsDashboard = () => {
   }
 
   return (
+    <div className="admin-new-container">
+      <AdminSidebar />
     <div className="aitut_studymat_dashboard">
       <div className="aitut_studymat_dash_header">
         <h1>
@@ -265,6 +268,7 @@ const StudyMaterialsDashboard = () => {
           </div>
         )}
       </div>
+    </div>
     </div>
   );
 };

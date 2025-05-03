@@ -200,21 +200,10 @@ const Login = () => {
                     </button>
                 </form>
                 
-                <div className="eduai-auth-divider">
-                    <span>or continue with</span>
-                </div>
+          
+               
                 
-                <div className="eduai-social-login">
-                    <button className="eduai-social-btn eduai-google">
-                        G
-                    </button>
-                    <button className="eduai-social-btn eduai-facebook">
-                        f
-                    </button>
-                    <button className="eduai-social-btn eduai-apple">
-                        
-                    </button>
-                </div>
+                
                 
                 <p className="eduai-auth-redirect">
                     Don't have an account? 

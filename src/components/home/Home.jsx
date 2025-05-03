@@ -256,7 +256,7 @@ const HomePage = () => {
                 <span>📚</span>
               </div>
               <h3>Comprehensive Subject Coverage</h3>
-              <p>From IIT-JEE preparation to UPSC, NEET, and all academic subjects - we cover all your educational needs.</p>
+              <p>From foundational learning to advanced mastery , your all-in-one destination for academic success.</p>
               <div className="neurale-feature-hover-effect"></div>
             </div>
             <div className="neurale-feature-card">
@@ -317,15 +317,15 @@ const HomePage = () => {
                 a learning experience that's personalized, interactive, and effective. Our platform isn't 
                 just about providing answers—it's about fostering deep understanding and critical thinking skills.
               </p>
-              <p>
+              {/* <p>
                 Founded by a team of IIT and IIM alumni, Neurale Learn is designed to make quality education 
                 accessible to every Indian student, regardless of location or background. Our AI has been trained 
                 on Indian education board syllabi and competitive exam patterns.
-              </p>
-              <button className="neurale-btn neurale-btn-outline" onClick={() => navigate('/about')}>
+              </p> */}
+              {/* <button className="neurale-btn neurale-btn-outline" onClick={() => navigate('/about')}>
                 <span>Our Story</span>
                 <span className="icon">→</span>
-              </button>
+              </button> */}
             </div>
             <div className="neurale-about-visual">
               <div className="neurale-india-map-container">

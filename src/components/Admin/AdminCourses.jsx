@@ -7,14 +7,15 @@ import {
   FaPlus,
   FaEdit,
   FaTrash,
-  FaEye,
   FaSearch,
   FaFilter,
   FaRobot,
-  FaBook
+  FaBook,
+  FaArrowLeft
 } from "react-icons/fa";
 import { MdPublish, MdUnpublished } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import AdminSidebar from "./AdminSidebar";
 
 const AdminCourses = () => {
   // State management
@@ -98,9 +99,16 @@ const AdminCourses = () => {
       setLoading(false);
     }
   };
+  
   const handleManageStudyMaterials = (courseId) => {
     navigate(`/admin/course/${courseId}/study-materials`);
   };
+  
+  // Navigate back to admin dashboard
+  const handleBackToDashboard = () => {
+    navigate('/admin-dashboard');
+  };
+  
   // Fetch unique categories
   const fetchCategories = async () => {
     try {
@@ -322,10 +330,21 @@ const AdminCourses = () => {
   };
 
   return (
+    <div className="admin-new-container">
+      <AdminSidebar />
     <div className="admin-courses-container">
+      
       {/* Header */}
       <header className="admin-courses-header">
-        <h1>Course Management</h1>
+        <div className="admin-header-left">
+          <button
+            className="back-to-dashboard-btn"
+            onClick={handleBackToDashboard}
+          >
+            <FaArrowLeft /> Back to Dashboard
+          </button>
+          <h1>Course Management</h1>
+        </div>
         <button
           className="add-course-btn"
           onClick={() => {
@@ -432,13 +451,7 @@ const AdminCourses = () => {
                     >
                       <FaBook />
                     </button>
-                    <button
-                      className="view-btn"
-                      title="View Course"
-                      onClick={() => window.open(`/courses/${course._id}`, '_blank')}
-                    >
-                      <FaEye />
-                    </button>
+                   
                     <button
                       className="edit-btn"
                       title="Edit Course"
@@ -813,6 +826,7 @@ const AdminCourses = () => {
           </div>
         </div>
       )}
+    </div>
     </div>
   );
 };

@@ -1,0 +1,146 @@
+/* AdminSidebar.css */
+/* This CSS uses more specific class names to avoid conflicts */
+
+/* Using unique classname for variables to avoid conflicts with global styles */
+.aitut_admin_sidebar_component {
+    /* CSS variables for AdminSidebar component only */
+    --aitut-sidebar-primary-color: #4267B2;
+    --aitut-sidebar-primary-dark: #36518F;
+    --aitut-sidebar-primary-light: #5C7CFA;
+    --aitut-sidebar-secondary-color: #6c757d;
+    --aitut-sidebar-success-color: #28a745;
+    --aitut-sidebar-danger-color: #dc3545;
+    --aitut-sidebar-warning-color: #ffc107;
+    --aitut-sidebar-info-color: #17a2b8;
+    --aitut-sidebar-light-color: #f8f9fa;
+    --aitut-sidebar-dark-color: #343a40;
+    --aitut-sidebar-bg-light: #f9fafb;
+    --aitut-sidebar-text-color: #333;
+    --aitut-sidebar-text-muted: #6c757d;
+    --aitut-sidebar-border-color: #e0e0e0;
+    --aitut-sidebar-border-radius: 8px;
+    --aitut-sidebar-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --aitut-sidebar-transition: all 0.3s ease;
+    --aitut-sidebar-width: 250px;
+  }
+  
+  /* Sidebar Styles */
+  .aitut_admin_sidebar {
+    width: var(--aitut-sidebar-width, 250px);
+    background: linear-gradient(135deg, var(--aitut-sidebar-primary-color, #4267B2), var(--aitut-sidebar-primary-dark, #36518F));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .aitut_admin_sidebar_logo {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .aitut_admin_sidebar_logo h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+  }
+  
+  .aitut_admin_sidebar_logo p {
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+  
+  .aitut_admin_sidebar_nav {
+    flex: 1;
+    padding: 20px 0;
+  }
+  
+  .aitut_admin_sidebar_nav_item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: white;
+    text-align: left;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: var(--aitut-sidebar-transition, all 0.3s ease);
+  }
+  
+  .aitut_admin_sidebar_nav_item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .aitut_admin_sidebar_nav_item svg {
+    margin-right: 10px;
+    font-size: 1.1rem;
+  }
+  
+  .aitut_admin_sidebar_nav_active {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: 500;
+  }
+  
+  .aitut_admin_sidebar_footer {
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .aitut_admin_sidebar_logout_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    border-radius: var(--aitut-sidebar-border-radius, 8px);
+    cursor: pointer;
+    transition: var(--aitut-sidebar-transition, all 0.3s ease);
+  }
+  
+  .aitut_admin_sidebar_logout_btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .aitut_admin_sidebar_logout_btn svg {
+    margin-right: 8px;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .aitut_admin_sidebar {
+      width: 70px;
+      overflow: hidden;
+    }
+    
+    .aitut_admin_sidebar_logo h2,
+    .aitut_admin_sidebar_logo p,
+    .aitut_admin_sidebar_nav_item span,
+    .aitut_admin_sidebar_logout_btn span {
+      display: none;
+    }
+    
+    .aitut_admin_sidebar_nav_item svg,
+    .aitut_admin_sidebar_logout_btn svg {
+      margin-right: 0;
+      font-size: 1.3rem;
+    }
+    
+    .aitut_admin_sidebar_nav_item {
+      justify-content: center;
+      padding: 15px 0;
+    }
+    
+    .aitut_admin_sidebar_logout_btn {
+      justify-content: center;
+    }
+  }
