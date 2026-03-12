@@ -14,8 +14,6 @@ import {
   FaFont, 
   FaAdjust,
   FaList, 
-  FaChevronDown, 
-  FaChevronUp, 
   FaTimes,
   FaBars
 } from "react-icons/fa";

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./AdminDashboard.css";
-import { FaBook, FaPlus, FaUsers, FaGraduationCap, FaChartLine, FaCog, FaSignOutAlt, FaQuestionCircle, FaUserPlus, FaClipboardList } from "react-icons/fa";
+import { FaBook, FaPlus, FaUsers, FaGraduationCap, FaChartLine,  FaSignOutAlt,  FaUserPlus, FaClipboardList } from "react-icons/fa";
 
 const AdminDashboard = () => {
     const [stats, setStats] = useState({

@@ -6,7 +6,6 @@ import {
   FaUsers, 
   FaGraduationCap, 
   FaBook, 
-  FaClipboardList,
   FaSignOutAlt 
 } from 'react-icons/fa';
 import './AdminSidebar.css';
