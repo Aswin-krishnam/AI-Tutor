@@ -3,8 +3,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./AssessmentManagement.css";
 import { 
-  FaPlus, FaSpinner, FaTrash, FaEdit, 
-  FaSave, FaTimes, FaRobot, FaExclamationTriangle ,FaChartLine
+  FaSpinner, FaTrash, FaEdit, 
+   FaRobot, FaExclamationTriangle ,FaChartLine
 } from "react-icons/fa";
 
 const AssessmentManagement = () => {

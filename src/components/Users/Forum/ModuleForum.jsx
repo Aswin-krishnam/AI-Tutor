@@ -5,8 +5,8 @@ import axios from "axios";
 import "./ModuleForum.css"; // Will create this next
 import {
   FaArrowLeft, FaPlus, FaBrain, FaSearch,
-  FaThumbsUp, FaComments, FaEye, FaCalendarAlt,
-  FaClock, FaStar, FaRobot, FaSpinner, FaFilter
+   FaComments, FaEye, 
+  FaClock,  FaRobot, FaSpinner, FaFilter
 } from "react-icons/fa";
 
 const ModuleForum = () => {

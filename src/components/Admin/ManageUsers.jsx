@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { FaUsers, FaPlus, FaEdit, FaTrash, FaSearch, FaFilter, FaSort, FaChartLine, FaGraduationCap, FaBook, FaClipboardList, FaCog, FaSignOutAlt } from 'react-icons/fa';
+import { FaUsers, FaPlus, FaEdit, FaTrash, FaSearch, FaFilter, FaSort, FaChartLine, FaGraduationCap, FaBook,  FaSignOutAlt } from 'react-icons/fa';
 import './AdminPages.css';
 
 const ManageUsers = () => {

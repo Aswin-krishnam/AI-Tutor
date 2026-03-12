@@ -12,7 +12,7 @@ import AdminCourses from './components/Admin/AdminCourses';
 import CoursesBrowse from './components/Users/CoursesBrowse';
 import CourseDetail from './components/Users/CourseDetail';
 import CourseLearning from './components/Users/CourseLearning';
-import StudyMaterials from './components/StudyMaterials';
+
 
 import ProfessionalStudyMaterials from './components/Users/ProfessionalStudyMaterials';
 import StudyMaterialsManager from './components/Admin/StudyMaterialsManager';
